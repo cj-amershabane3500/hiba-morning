@@ -1,0 +1,1985 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>صباح الخير يا هبة 🤍</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      overflow-x: hidden;
+      color: #533f47;
+
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.95), transparent 28%),
+        radial-gradient(circle at 85% 80%, rgba(255,220,229,.55), transparent 30%),
+        linear-gradient(135deg, #fffaf6, #fdecef);
+
+      position: relative;
+    }
+
+
+    /* =========================
+       الخلفية
+    ========================= */
+
+    .background-shape {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(4px);
+      opacity: .4;
+      z-index: 0;
+
+      animation: floatShape 10s ease-in-out infinite alternate;
+    }
+
+    .shape1 {
+      width: 240px;
+      height: 240px;
+      background: #ffd9e2;
+
+      top: -80px;
+      right: -50px;
+    }
+
+    .shape2 {
+      width: 190px;
+      height: 190px;
+      background: #ffeecf;
+
+      bottom: -50px;
+      left: -40px;
+
+      animation-delay: 2s;
+    }
+
+    @keyframes floatShape {
+
+      from {
+        transform: translateY(0) translateX(0);
+      }
+
+      to {
+        transform: translateY(25px) translateX(15px);
+      }
+
+    }
+
+
+    /* =========================
+       كفوف الخلفية
+    ========================= */
+
+    .paw-bg {
+      position: fixed;
+      inset: 0;
+
+      pointer-events: none;
+      z-index: 0;
+
+      overflow: hidden;
+    }
+
+    .paw {
+      position: absolute;
+
+      font-size: 22px;
+      opacity: .08;
+
+      animation: drift 14s linear infinite;
+
+      user-select: none;
+    }
+
+    .paw:nth-child(1) {
+      top: 8%;
+      right: 14%;
+      animation-delay: 0s;
+    }
+
+    .paw:nth-child(2) {
+      top: 18%;
+      left: 10%;
+      animation-delay: 2s;
+    }
+
+    .paw:nth-child(3) {
+      top: 38%;
+      right: 8%;
+      animation-delay: 4s;
+    }
+
+    .paw:nth-child(4) {
+      top: 56%;
+      left: 12%;
+      animation-delay: 1s;
+    }
+
+    .paw:nth-child(5) {
+      top: 74%;
+      right: 16%;
+      animation-delay: 5s;
+    }
+
+    .paw:nth-child(6) {
+      top: 84%;
+      left: 22%;
+      animation-delay: 3s;
+    }
+
+    @keyframes drift {
+
+      0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: .05;
+      }
+
+      50% {
+        transform: translateY(-10px) translateX(8px) rotate(8deg);
+        opacity: .1;
+      }
+
+      100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: .05;
+      }
+
+    }
+
+
+    /* =========================
+       الصفحة
+    ========================= */
+
+    .page {
+      min-height: 100vh;
+
+      padding: 24px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: relative;
+      z-index: 2;
+    }
+
+
+    /* =========================
+       البطاقة الرئيسية
+    ========================= */
+
+    .card {
+
+      width: min(92vw, 650px);
+
+      padding: 50px 30px 38px;
+
+      background: rgba(255, 255, 255, .72);
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      border: 1px solid rgba(255,255,255,.95);
+      border-radius: 32px;
+
+      box-shadow:
+        0 25px 70px rgba(95, 60, 75, .12),
+        inset 0 1px rgba(255,255,255,.95);
+
+      text-align: center;
+
+      position: relative;
+      overflow: hidden;
+
+      animation: cardAppear 1.1s ease;
+    }
+
+    @keyframes cardAppear {
+
+      from {
+        opacity: 0;
+        transform: translateY(25px) scale(.98);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+    }
+
+
+    /* =========================
+       القطة
+    ========================= */
+
+    .cat-corner {
+
+      position: absolute;
+
+      top: 10px;
+      left: 14px;
+
+      display: flex;
+      align-items: center;
+
+      gap: 10px;
+
+      z-index: 3;
+
+      direction: ltr;
+    }
+
+
+    .cat-body {
+
+      position: relative;
+
+      width: 92px;
+      height: 92px;
+
+      border-radius: 24px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff8fb,
+          #ffeef3
+        );
+
+      border:
+        1px solid
+        rgba(228, 191, 203, .6);
+
+      box-shadow:
+        0 8px 24px
+        rgba(210, 155, 173, .14);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition:
+        transform .6s ease,
+        box-shadow .6s ease;
+    }
+
+
+    .cat-body.awake {
+
+      transform:
+        translateY(-2px)
+        rotate(-4deg);
+
+      box-shadow:
+        0 12px 28px
+        rgba(210, 155, 173, .2);
+
+    }
+
+
+    .cat-face {
+
+      font-size: 44px;
+
+      transition:
+        transform .5s ease;
+
+    }
+
+
+    .cat-body.awake .cat-face {
+
+      transform:
+        scale(1.07);
+
+    }
+
+
+    .cat-label {
+
+      position: absolute;
+
+      top: 72px;
+
+      left: 0;
+      right: 0;
+
+      font-size: 12px;
+
+      color: #b08694;
+
+    }
+
+
+    .coffee {
+
+      font-size: 24px;
+
+      transform:
+        translateY(10px);
+
+      opacity: .88;
+
+    }
+
+
+    /* =========================
+       العنوان
+    ========================= */
+
+    h1 {
+
+      font-size:
+        clamp(32px, 7vw, 48px);
+
+      color: #6a4b56;
+
+      margin-top: 55px;
+      margin-bottom: 14px;
+
+    }
+
+
+    .intro {
+
+      max-width: 480px;
+
+      margin: 0 auto;
+
+      line-height: 2;
+
+      font-size: 17px;
+
+      color: #7a636c;
+
+    }
+
+
+    .small-line {
+
+      width: 55px;
+      height: 3px;
+
+      border-radius: 10px;
+
+      background: #e9aebe;
+
+      margin: 24px auto;
+
+    }
+
+
+    /* =========================
+       الأزرار
+    ========================= */
+
+    button {
+
+      font-family: inherit;
+
+      cursor: pointer;
+
+      border: none;
+
+    }
+
+
+    .main-button {
+
+      margin-top: 4px;
+
+      padding:
+        14px 26px;
+
+      border-radius:
+        999px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #e7a6b8,
+          #d98fa5
+        );
+
+      color: white;
+
+      font-size: 16px;
+
+      font-weight: 600;
+
+      box-shadow:
+        0 10px 25px
+        rgba(216, 142, 164, .28);
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+    }
+
+
+    .main-button:hover {
+
+      transform:
+        translateY(-3px);
+
+      box-shadow:
+        0 14px 30px
+        rgba(216, 142, 164, .36);
+
+    }
+
+
+    .main-button:active {
+
+      transform:
+        scale(.97);
+
+    }
+
+
+    /* =========================
+       الرسالة الأساسية
+    ========================= */
+
+    #hiddenMessage {
+
+      max-height: 0;
+
+      opacity: 0;
+
+      overflow: hidden;
+
+      transition:
+        max-height 1s ease,
+        opacity 1s ease,
+        margin 1s ease;
+
+      margin-top: 0;
+
+    }
+
+
+    #hiddenMessage.show {
+
+      max-height: 1500px;
+
+      opacity: 1;
+
+      margin-top: 30px;
+
+    }
+
+
+    .cat-awake-note {
+
+      margin-bottom: 18px;
+
+      font-size: 14px;
+
+      color: #b08591;
+
+      opacity: 0;
+
+      transform:
+        translateY(6px);
+
+      transition:
+        .6s ease;
+
+    }
+
+
+    .cat-awake-note.show {
+
+      opacity: 1;
+
+      transform:
+        translateY(0);
+
+    }
+
+
+    .message-box {
+
+      padding: 24px;
+
+      background:
+        rgba(255,255,255,.64);
+
+      border:
+        1px solid
+        rgba(234, 184, 198, .45);
+
+      border-radius: 24px;
+
+      line-height: 2;
+
+      font-size: 17px;
+
+    }
+
+
+    .message-box strong {
+
+      color: #cb7791;
+
+    }
+
+
+    /* =========================
+       رسائل اليوم
+    ========================= */
+
+    .daily-section {
+
+      margin-top: 30px;
+
+      padding-top: 25px;
+
+      border-top:
+        1px solid
+        rgba(120, 90, 100, .12);
+
+    }
+
+
+    .daily-title {
+
+      font-size: 14px;
+
+      color: #a28790;
+
+      margin-bottom: 12px;
+
+    }
+
+
+    .daily-button {
+
+      background:
+        transparent;
+
+      color: #c3798f;
+
+      border:
+        1px solid
+        #e4b3c1;
+
+      padding:
+        11px 22px;
+
+      border-radius:
+        999px;
+
+      font-size: 15px;
+
+      transition:
+        background .25s,
+        transform .25s,
+        box-shadow .25s;
+
+    }
+
+
+    .daily-button:hover {
+
+      background:
+        #fff5f7;
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 8px 18px
+        rgba(205, 139, 158, .12);
+
+    }
+
+
+    .daily-button:active {
+
+      transform:
+        scale(.97);
+
+    }
+
+
+    #dailyMessageBox {
+
+      min-height: 30px;
+
+      margin-top: 17px;
+
+      font-size: 15px;
+
+      line-height: 1.9;
+
+      color: #705a62;
+
+      opacity: 0;
+
+      transform:
+        translateY(5px);
+
+      transition:
+        opacity .5s ease,
+        transform .5s ease;
+
+    }
+
+
+    #dailyMessageBox.visible {
+
+      opacity: 1;
+
+      transform:
+        translateY(0);
+
+    }
+
+
+    #dailyHint {
+
+      margin-top: 9px;
+
+      font-size: 12px;
+
+      color: #b49ca4;
+
+      opacity: 0;
+
+      transform:
+        translateY(4px);
+
+      transition:
+        opacity .6s ease,
+        transform .6s ease;
+
+    }
+
+
+    #dailyHint.visible {
+
+      opacity: 1;
+
+      transform:
+        translateY(0);
+
+    }
+
+
+    /* =========================
+       مفاجأة الضغط الرابع
+    ========================= */
+
+    #specialMessage {
+
+      max-height: 0;
+
+      overflow: hidden;
+
+      opacity: 0;
+
+      margin-top: 0;
+
+      padding:
+        0 18px;
+
+      color: #c56f89;
+
+      font-size: 14px;
+
+      line-height: 1.8;
+
+      transition:
+        max-height .8s ease,
+        opacity .8s ease,
+        margin .8s ease,
+        padding .8s ease;
+
+    }
+
+
+    #specialMessage.show {
+
+      max-height: 170px;
+
+      opacity: 1;
+
+      margin-top: 18px;
+
+      padding:
+        14px 18px;
+
+      background:
+        rgba(255, 245, 248, .72);
+
+      border-radius: 18px;
+
+    }
+
+
+    /* =========================
+       النهاية
+    ========================= */
+
+    .footer {
+
+      margin-top: 32px;
+
+      color: #ab959d;
+
+      font-size: 13px;
+
+      line-height: 1.8;
+
+    }
+
+
+    /* =========================
+       العناصر الطائرة
+    ========================= */
+
+    .float-item {
+
+      position: fixed;
+
+      bottom: -40px;
+
+      pointer-events: none;
+
+      z-index: 1100;
+
+      animation:
+        rise linear forwards;
+
+      opacity: 0;
+
+    }
+
+
+    @keyframes rise {
+
+      0% {
+
+        transform:
+          translateY(0)
+          rotate(0deg);
+
+        opacity: 0;
+
+      }
+
+      15% {
+
+        opacity: 1;
+
+      }
+
+      100% {
+
+        transform:
+          translateY(-110vh)
+          rotate(25deg);
+
+        opacity: 0;
+
+      }
+
+    }
+
+
+    /* =============================================
+       المفاجأة السرية - بعد 7 ضغطات
+    ============================================= */
+
+    #secretSurprise {
+
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 1000;
+
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      padding: 25px;
+
+      background:
+        rgba(74, 49, 59, .20);
+
+      backdrop-filter:
+        blur(9px);
+
+      -webkit-backdrop-filter:
+        blur(9px);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      transition:
+        opacity .6s ease,
+        visibility .6s ease;
+
+    }
+
+
+    #secretSurprise.show {
+
+      opacity: 1;
+
+      visibility: visible;
+
+    }
+
+
+    .secret-card {
+
+      width:
+        min(90vw, 440px);
+
+      padding:
+        34px 28px;
+
+      border-radius:
+        30px;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.96),
+          rgba(255,241,246,.96)
+        );
+
+      border:
+        1px solid
+        rgba(255,255,255,.95);
+
+      box-shadow:
+        0 30px 90px
+        rgba(97, 60, 75, .25);
+
+      transform:
+        scale(.75)
+        translateY(25px);
+
+      opacity: 0;
+
+      transition:
+        transform .65s
+        cubic-bezier(.2,.9,.3,1.2),
+        opacity .65s ease;
+
+      position: relative;
+
+    }
+
+
+    #secretSurprise.show
+    .secret-card {
+
+      transform:
+        scale(1)
+        translateY(0);
+
+      opacity: 1;
+
+    }
+
+
+    .secret-cat {
+
+      font-size: 54px;
+
+      margin-bottom: 12px;
+
+      animation:
+        secretCat 1.2s
+        ease-in-out infinite alternate;
+
+    }
+
+
+    @keyframes secretCat {
+
+      from {
+
+        transform:
+          rotate(-5deg)
+          translateY(0);
+
+      }
+
+      to {
+
+        transform:
+          rotate(5deg)
+          translateY(-5px);
+
+      }
+
+    }
+
+
+    .secret-title {
+
+      font-size: 23px;
+
+      color: #c36e88;
+
+      margin-bottom: 18px;
+
+      font-weight: 700;
+
+    }
+
+
+    .secret-text {
+
+      color: #705a62;
+
+      font-size: 16px;
+
+      line-height: 2;
+
+    }
+
+
+    .secret-text strong {
+
+      color: #cb7791;
+
+    }
+
+
+    .secret-small {
+
+      margin-top: 16px;
+
+      color: #ae939c;
+
+      font-size: 12px;
+
+    }
+
+
+    .close-secret {
+
+      margin-top: 22px;
+
+      padding:
+        11px 23px;
+
+      border-radius:
+        999px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #e7a6b8,
+          #d98fa5
+        );
+
+      color: white;
+
+      font-size: 14px;
+
+      box-shadow:
+        0 8px 20px
+        rgba(216, 142, 164, .22);
+
+      transition:
+        transform .25s ease;
+
+    }
+
+
+    .close-secret:hover {
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
+    .close-secret:active {
+
+      transform:
+        scale(.96);
+
+    }
+
+
+    /* =========================
+       موبايل
+    ========================= */
+
+    @media (max-width: 560px) {
+
+      .card {
+
+        padding:
+          46px 22px 34px;
+
+        border-radius:
+          28px;
+
+      }
+
+
+      h1 {
+
+        margin-top: 70px;
+
+      }
+
+
+      .intro,
+      .message-box {
+
+        font-size: 16px;
+
+      }
+
+
+      .cat-corner {
+
+        top: 10px;
+        left: 10px;
+
+      }
+
+
+      .cat-body {
+
+        width: 82px;
+        height: 82px;
+
+      }
+
+
+      .cat-face {
+
+        font-size: 38px;
+
+      }
+
+
+      .coffee {
+
+        font-size: 22px;
+
+      }
+
+
+      .secret-card {
+
+        padding:
+          30px 23px;
+
+      }
+
+
+      .secret-title {
+
+        font-size: 21px;
+
+      }
+
+
+      .secret-text {
+
+        font-size: 15px;
+
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- الخلفية -->
+
+  <div class="background-shape shape1"></div>
+
+  <div class="background-shape shape2"></div>
+
+
+  <!-- كفوف خفيفة بالخلفية -->
+
+  <div class="paw-bg">
+
+    <span class="paw">🐾</span>
+    <span class="paw">🐾</span>
+    <span class="paw">🐾</span>
+
+    <span class="paw">🐾</span>
+    <span class="paw">🐾</span>
+    <span class="paw">🐾</span>
+
+  </div>
+
+
+
+  <!-- الصفحة -->
+
+  <div class="page">
+
+    <main class="card">
+
+
+      <!-- القطة -->
+
+      <div class="cat-corner">
+
+        <div
+          class="cat-body"
+          id="catBody"
+        >
+
+          <div
+            class="cat-face"
+            id="catFace"
+          >
+            😽
+          </div>
+
+          <div
+            class="cat-label"
+            id="catLabel"
+          >
+            القطة لسا نايمة شوي 💤
+          </div>
+
+        </div>
+
+        <div class="coffee">
+          ☕
+        </div>
+
+      </div>
+
+
+
+      <!-- العنوان -->
+
+      <h1>
+        صباح الخير يا هبة 🤍
+      </h1>
+
+
+      <p class="intro">
+
+        قبل ما يبلش يومك يا بطلتي...
+
+        <br>
+
+        في حدا حب يتركلك هون سبب صغير
+        يخلي بداية يومك ألطف شوي.
+
+      </p>
+
+
+      <div class="small-line"></div>
+
+
+
+      <!-- الزر الأساسي -->
+
+      <button
+        class="main-button"
+        onclick="openMessage()"
+      >
+
+        القطة مخبّيتلك شي 🐾
+
+      </button>
+
+
+
+      <!-- الرسالة -->
+
+      <section id="hiddenMessage">
+
+
+        <div
+          class="cat-awake-note"
+          id="catAwakeNote"
+        >
+
+          صحيت القطة وقررت
+          تعطيكي الرسالة بنفسها 😺🐾
+
+        </div>
+
+
+
+        <div class="message-box">
+
+          بتمنى أول شي يصادفك اليوم يكون
+
+          <strong>
+            ابتسامة.
+          </strong>
+
+
+          <br><br>
+
+
+          وبتمنى يكون يومك أخف على قلبك،
+
+          وفيه أشياء حلوة
+          حتى لو كانت صغيرة.
+
+
+          <br><br>
+
+
+          وإذا ما كان اليوم مثالي...
+
+          عادي.
+
+
+          <br>
+
+
+          المهم تذكري إنك مو مطالبة
+          تربحي كل معارك الدنيا بيوم واحد.
+
+
+          <br><br>
+
+
+          خدي يومك شوي شوي،
+
+          وكوني لطيفة مع حالك.
+
+
+          <br><br>
+
+
+          وبس حبيت ذكّرك...
+
+
+          <br>
+
+
+          <strong>
+
+            في حدا هون
+            بيتمنى يشوفك مبسوطة 🤍
+
+          </strong>
+
+        </div>
+
+
+
+        <!-- رسائل اليوم -->
+
+        <div class="daily-section">
+
+
+          <div class="daily-title">
+
+            وفي كمان رسالة صغيرة لليوم...
+
+          </div>
+
+
+
+          <button
+
+            id="dailyButton"
+
+            class="daily-button"
+
+            onclick="showDailyMessage()"
+
+          >
+
+            رسالة اليوم ✨
+
+          </button>
+
+
+
+          <div id="dailyMessageBox"></div>
+
+
+
+          <div id="dailyHint">
+
+            فيكي تجربي مرة تانية…
+
+            يمكن الرسالة الجاية
+            تعجبك أكتر 👀✨
+
+          </div>
+
+
+
+          <div id="specialMessage">
+
+            حتى القطة صارت مستغربة
+            قديش عم تدوري عالرسائل 😼🤍
+
+            <br>
+
+            واضح إنك حبيتي الفكرة...
+
+            وهاد كان متوقَّع بصراحة 🐾
+
+          </div>
+
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- النهاية -->
+
+      <div class="footer">
+
+        موافَق عليه من قسم القطط الصباحية 🐾
+
+      </div>
+
+
+    </main>
+
+  </div>
+
+
+
+  <!-- =========================================
+       المفاجأة السرية
+  ========================================== -->
+
+  <div
+    id="secretSurprise"
+    onclick="closeSecretFromOutside(event)"
+  >
+
+    <div class="secret-card">
+
+
+      <div class="secret-cat">
+
+        😼
+
+      </div>
+
+
+      <div class="secret-title">
+
+        اكتشفتي السر 🤫🐾
+
+      </div>
+
+
+      <div class="secret-text">
+
+        بما إنك وصلتي لهون...
+
+        <br>
+
+        هالمرة الرسالة
+        <strong>
+          مو من القطة
+        </strong>
+
+        😌
+
+
+        <br><br>
+
+
+        صباحك حلو يا بطلتي،
+
+        وبتمنى اليوم يعطيكي
+        ولو سبب صغير
+
+        <br>
+
+        يخليكي تبتسمي
+        <strong>
+          من قلبك 🤍
+        </strong>
+
+      </div>
+
+
+      <div class="secret-small">
+
+        القطة أنكرت أي علاقة
+        بهالرسالة 🐾
+
+      </div>
+
+
+      <button
+        class="close-secret"
+        onclick="closeSecret()"
+      >
+
+        خلي السر بيناتنا 🤫
+
+      </button>
+
+
+    </div>
+
+  </div>
+
+
+
+  <script>
+
+
+    let opened = false;
+
+    let lastMessageIndex = -1;
+
+    let clickCount = 0;
+
+    let secretShown = false;
+
+
+
+    /* =========================
+       الرسائل
+    ========================= */
+
+    const messages = [
+
+      "مهمة اليوم: ابتسامة وحدة عالأقل... والباقي منحلّه بعدين 😌",
+
+      "ما لازم يكون كل شي مثالي حتى يكون اليوم حلو 🤍",
+
+      "خدي الأمور شوي شوي... اليوم مو سباق 🌷",
+
+      "يمكن أحلى شي يصير اليوم لسا ما صار ✨",
+
+      "لا تنسي تعطي حالك نفس اللطف يلي بتعطيه للناس 🤍",
+
+      "شوي قهوة، شوي هدوء، وشوي ثقة إن اليوم ممكن يكون حلو ☕",
+
+      "تذكير بسيط: وجودك لحاله بيضيف شي حلو لهالدنيا 🌸",
+
+      "إذا صار شي مو على مزاجك اليوم، لا تعطيه أكبر من حجمه... كمّلي يومك 🤍",
+
+      "كل يوم جديد فرصة صغيرة نرتّب حالنا من أول وجديد 🌷",
+
+      "مو مطلوب منك اليوم إلا إنك تعملي يلي عليكي وتكوني منيحة مع حالك ✨",
+
+      "إذا تعبتي، ارتاحي شوي... الراحة مو خسارة وقت 🤍",
+
+      "يمكن اليوم يحمللك موقف صغير يغير مزاجك كله للأحسن 🌸",
+
+      "اليوم حاولي ما تكوني قاسية على حالك... خليكي بصالحك شوي 😌",
+
+      "بداية اليوم ما بتحدد نهايته... حتى لو بلش عادي ممكن ينتهي حلو 🤍",
+
+      "وإذا ما في سبب للابتسامة هلق... اعتبري هاي الرسالة سبب صغير 🌷",
+
+      "ما تنسي إنك أقوى من كتير أيام مرقت عليكي وقلتي ما رح تقدري عليها ✨",
+
+      "خدي نفس عميق... ولسا في كتير أشياء حلوة ممكن تصير اليوم 🤍",
+
+      "إذا اليوم كان هادي، استمتعي فيه... وإذا كان مزعج، لا تخليه يسرق منك كل اليوم 🌸"
+
+    ];
+
+
+
+    /* =========================
+       فتح الرسالة
+    ========================= */
+
+    function openMessage() {
+
+
+      const message =
+        document.getElementById(
+          "hiddenMessage"
+        );
+
+
+      const catBody =
+        document.getElementById(
+          "catBody"
+        );
+
+
+      const catFace =
+        document.getElementById(
+          "catFace"
+        );
+
+
+      const catLabel =
+        document.getElementById(
+          "catLabel"
+        );
+
+
+      const catAwakeNote =
+        document.getElementById(
+          "catAwakeNote"
+        );
+
+
+
+      message.classList.add(
+        "show"
+      );
+
+
+
+      if (!opened) {
+
+
+        opened = true;
+
+
+        catBody.classList.add(
+          "awake"
+        );
+
+
+        catFace.textContent =
+          "😺";
+
+
+        catLabel.textContent =
+          "صحيت القطة وصارت جاهزة 🐾";
+
+
+
+        setTimeout(() => {
+
+          catAwakeNote.classList.add(
+            "show"
+          );
+
+        }, 450);
+
+
+
+        for (
+          let i = 0;
+          i < 10;
+          i++
+        ) {
+
+          setTimeout(() => {
+
+            createFloatItem();
+
+          }, i * 170);
+
+        }
+
+      }
+
+    }
+
+
+
+    /* =========================
+       رسالة اليوم
+    ========================= */
+
+    function showDailyMessage() {
+
+
+      const box =
+        document.getElementById(
+          "dailyMessageBox"
+        );
+
+
+      const hint =
+        document.getElementById(
+          "dailyHint"
+        );
+
+
+      const button =
+        document.getElementById(
+          "dailyButton"
+        );
+
+
+      const special =
+        document.getElementById(
+          "specialMessage"
+        );
+
+
+
+      clickCount++;
+
+
+
+      let newIndex;
+
+
+
+      do {
+
+        newIndex =
+          Math.floor(
+            Math.random()
+            * messages.length
+          );
+
+      }
+
+      while (
+
+        newIndex ===
+        lastMessageIndex
+
+        &&
+
+        messages.length > 1
+
+      );
+
+
+
+      lastMessageIndex =
+        newIndex;
+
+
+
+      box.classList.remove(
+        "visible"
+      );
+
+
+
+      setTimeout(() => {
+
+
+        box.textContent =
+          messages[newIndex];
+
+
+        box.classList.add(
+          "visible"
+        );
+
+
+      }, 180);
+
+
+
+      /* أول ضغطة */
+
+      if (
+        clickCount === 1
+      ) {
+
+
+        setTimeout(() => {
+
+          hint.classList.add(
+            "visible"
+          );
+
+        }, 650);
+
+
+        button.textContent =
+          "رسالة تانية؟ 🌷";
+
+      }
+
+
+
+      /* رابع ضغطة */
+
+      if (
+        clickCount >= 4
+      ) {
+
+        special.classList.add(
+          "show"
+        );
+
+      }
+
+
+
+      if (
+        clickCount === 4
+      ) {
+
+
+        for (
+          let i = 0;
+          i < 6;
+          i++
+        ) {
+
+          setTimeout(() => {
+
+            createFloatItem();
+
+          }, i * 150);
+
+        }
+
+      }
+
+
+
+      /* =========================
+         المفاجأة السرية
+         بعد 7 ضغطات
+      ========================= */
+
+      if (
+        clickCount === 7
+        &&
+        !secretShown
+      ) {
+
+
+        secretShown = true;
+
+
+        setTimeout(() => {
+
+          showSecret();
+
+        }, 650);
+
+      }
+
+    }
+
+
+
+    /* =========================
+       إظهار السر
+    ========================= */
+
+    function showSecret() {
+
+
+      const secret =
+        document.getElementById(
+          "secretSurprise"
+        );
+
+
+      secret.classList.add(
+        "show"
+      );
+
+
+
+      /*
+       كمية أكبر من
+       القلوب والكفوف
+      */
+
+      for (
+        let i = 0;
+        i < 18;
+        i++
+      ) {
+
+        setTimeout(() => {
+
+          createFloatItem();
+
+        }, i * 90);
+
+      }
+
+    }
+
+
+
+    /* =========================
+       إغلاق السر
+    ========================= */
+
+    function closeSecret() {
+
+
+      const secret =
+        document.getElementById(
+          "secretSurprise"
+        );
+
+
+      secret.classList.remove(
+        "show"
+      );
+
+    }
+
+
+
+    /*
+     إذا ضغطت خارج البطاقة
+    */
+
+    function closeSecretFromOutside(
+      event
+    ) {
+
+
+      if (
+
+        event.target.id ===
+        "secretSurprise"
+
+      ) {
+
+        closeSecret();
+
+      }
+
+    }
+
+
+
+    /* =========================
+       قلوب + كفوف
+    ========================= */
+
+    function createFloatItem() {
+
+
+      const item =
+        document.createElement(
+          "div"
+        );
+
+
+      item.className =
+        "float-item";
+
+
+
+      const symbols = [
+
+        "♡",
+        "🐾",
+        "♡",
+        "🐾",
+        "♡"
+
+      ];
+
+
+
+      const chosen =
+        symbols[
+          Math.floor(
+            Math.random()
+            * symbols.length
+          )
+        ];
+
+
+
+      item.textContent =
+        chosen;
+
+
+
+      item.style.left =
+        Math.random()
+        * 100
+        + "vw";
+
+
+
+      item.style.fontSize =
+        (
+          16
+          +
+          Math.random()
+          * 16
+        )
+        + "px";
+
+
+
+      item.style.animationDuration =
+        (
+          5
+          +
+          Math.random()
+          * 4
+        )
+        + "s";
+
+
+
+      item.style.color =
+
+        chosen === "🐾"
+
+        ?
+
+        "rgba(193, 143, 158, 0.35)"
+
+        :
+
+        "rgba(221, 143, 165, 0.35)";
+
+
+
+      document.body.appendChild(
+        item
+      );
+
+
+
+      setTimeout(() => {
+
+        item.remove();
+
+      }, 9000);
+
+    }
+
+  </script>
+
+
+</body>
+</html>
