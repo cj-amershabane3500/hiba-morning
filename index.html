@@ -57,6 +57,7 @@
       from {
         transform: translate(0, 0);
       }
+
       to {
         transform: translate(18px, 22px);
       }
@@ -77,16 +78,40 @@
       animation: pawFloat 10s ease-in-out infinite alternate;
     }
 
-    .paw:nth-child(1) { top: 12%; left: 10%; }
-    .paw:nth-child(2) { top: 25%; right: 8%; animation-delay: 2s; }
-    .paw:nth-child(3) { top: 52%; left: 7%; animation-delay: 4s; }
-    .paw:nth-child(4) { top: 70%; right: 12%; animation-delay: 1s; }
-    .paw:nth-child(5) { top: 85%; left: 20%; animation-delay: 3s; }
+    .paw:nth-child(1) {
+      top: 12%;
+      left: 10%;
+    }
+
+    .paw:nth-child(2) {
+      top: 25%;
+      right: 8%;
+      animation-delay: 2s;
+    }
+
+    .paw:nth-child(3) {
+      top: 52%;
+      left: 7%;
+      animation-delay: 4s;
+    }
+
+    .paw:nth-child(4) {
+      top: 70%;
+      right: 12%;
+      animation-delay: 1s;
+    }
+
+    .paw:nth-child(5) {
+      top: 85%;
+      left: 20%;
+      animation-delay: 3s;
+    }
 
     @keyframes pawFloat {
       from {
         transform: translateY(0) rotate(-4deg);
       }
+
       to {
         transform: translateY(-10px) rotate(5deg);
       }
@@ -126,6 +151,7 @@
         opacity: 0;
         transform: translateY(18px) scale(.98);
       }
+
       to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -143,6 +169,7 @@
       from {
         transform: translateY(0) rotate(-3deg);
       }
+
       to {
         transform: translateY(-5px) rotate(3deg);
       }
@@ -197,6 +224,7 @@
       opacity: 0;
       overflow: hidden;
       margin-top: 0;
+
       transition:
         max-height .9s ease,
         opacity .9s ease,
@@ -204,7 +232,7 @@
     }
 
     #mainMessage.show {
-      max-height: 1000px;
+      max-height: 1200px;
       opacity: 1;
       margin-top: 28px;
     }
@@ -221,6 +249,28 @@
 
     .message-box strong {
       color: #bd7c77;
+    }
+
+    .hero-note {
+      margin-top: 20px;
+      padding: 16px 18px;
+
+      border-radius: 18px;
+
+      background: rgba(255, 248, 245, .72);
+
+      border: 1px solid rgba(215,177,168,.32);
+
+      color: #8a6d72;
+
+      font-size: 15px;
+      line-height: 1.9;
+
+      box-shadow: 0 8px 20px rgba(120, 90, 90, .05);
+    }
+
+    .hero-note strong {
+      color: #b97772;
     }
 
     .choices {
@@ -281,7 +331,9 @@
     .little-note {
       margin-top: 28px;
       padding-top: 20px;
-      border-top: 1px solid rgba(125,95,100,.10);
+
+      border-top:
+        1px solid rgba(125,95,100,.10);
 
       font-size: 14px;
       color: #9b858a;
@@ -317,9 +369,11 @@
         transform: translateY(0) rotate(0deg);
         opacity: 0;
       }
+
       15% {
         opacity: 1;
       }
+
       100% {
         transform: translateY(-110vh) rotate(20deg);
         opacity: 0;
@@ -335,6 +389,10 @@
       .intro,
       .message-box {
         font-size: 16px;
+      }
+
+      .hero-note {
+        font-size: 14px;
       }
 
       .cat {
@@ -373,9 +431,13 @@
 
       <div class="divider"></div>
 
-      <button class="main-button" onclick="openMessage()">
+      <button
+        class="main-button"
+        onclick="openMessage()"
+      >
         طيب شو هي؟ 👀
       </button>
+
 
       <section id="mainMessage">
 
@@ -406,39 +468,79 @@
         </div>
 
 
+        <div class="hero-note">
+
+          من الصبح للمسا وإنتِ عم تعطي من طاقتك...
+
+          <br>
+
+          فبس حبيت ذكّرك إنك عنجد
+          <strong>بطلتي</strong>،
+
+          <br>
+
+          وحتى البطل بيتعب
+          وبيحتاج يرتاح شوي 🤍
+
+        </div>
+
+
         <div class="choices">
 
           <div class="choice-title">
             والقطة عندها كم جواب جاهز حسب الحالة 😼
           </div>
 
-          <button class="option-button" onclick="answer('silent')">
+
+          <button
+            class="option-button"
+            onclick="answer('silent')"
+          >
             وإذا ما إلي خلق أحكي؟ 💤
           </button>
 
-          <button class="option-button" onclick="answer('angry')">
+
+          <button
+            class="option-button"
+            onclick="answer('angry')"
+          >
             وإذا كنت معصبة؟ 😾
           </button>
 
-          <button class="option-button" onclick="answer('badDay')">
+
+          <button
+            class="option-button"
+            onclick="answer('badDay')"
+          >
             وإذا كان يومي سيئ؟ 🌧️
           </button>
+
 
           <div id="responseBox"></div>
 
         </div>
 
 
-        <div class="little-note" id="littleNote">
+        <div
+          class="little-note"
+          id="littleNote"
+        >
+
           وبيناتنا…
+
           <br>
-          يمكن بهمني أمرك أكتر من ما ببيّن أحياناً 🤍
+
+          يمكن بهمني أمرك
+          أكتر من ما ببيّن أحياناً 🤍
+
         </div>
 
       </section>
 
+
       <div class="footer">
-        القطة بتقول إن المزاج السيئ ما بيلغي حقك بالراحة 🐾
+        القطة بتقول إن المزاج السيئ
+        ما بيلغي حقك بالراحة 🐾
       </div>
 
     </main>
@@ -451,12 +553,18 @@
     let opened = false;
     let optionClicks = 0;
 
+
     function openMessage() {
 
-      const message = document.getElementById("mainMessage");
-      const cat = document.getElementById("cat");
+      const message =
+        document.getElementById("mainMessage");
+
+      const cat =
+        document.getElementById("cat");
+
 
       message.classList.add("show");
+
 
       if (!opened) {
 
@@ -464,81 +572,137 @@
 
         cat.textContent = "😸";
 
+
         for (let i = 0; i < 8; i++) {
+
           setTimeout(() => {
+
             createFloat();
+
           }, i * 160);
+
         }
+
       }
+
     }
 
 
     function answer(type) {
 
-      const box = document.getElementById("responseBox");
-      const note = document.getElementById("littleNote");
+      const box =
+        document.getElementById("responseBox");
+
+      const note =
+        document.getElementById("littleNote");
+
 
       let text = "";
 
+
       if (type === "silent") {
+
         text =
           "ولا مشكلة. منمشي شوي، منقعد شوي، أو منضل ساكتين. مو لازم يكون في حكي طول الوقت 🐾";
+
       }
+
 
       if (type === "angry") {
+
         text =
           "مسموح 😼 مو مطلوب منك تكوني لطيفة ومبتسمة طول الوقت. حتى القطة بتعصب أحياناً.";
+
       }
 
+
       if (type === "badDay") {
+
         text =
           "مو كل يوم لازم ينربح. في أيام بيكفي إننا نمرقها بهدوء ونوصل لآخرها 🤍";
+
       }
+
 
       box.classList.remove("show");
 
+
       setTimeout(() => {
+
         box.textContent = text;
+
         box.classList.add("show");
+
       }, 150);
+
 
       optionClicks++;
 
+
       if (optionClicks >= 2) {
+
         setTimeout(() => {
+
           note.classList.add("show");
+
         }, 450);
+
       }
+
     }
 
 
     function createFloat() {
 
-      const item = document.createElement("div");
+      const item =
+        document.createElement("div");
 
-      item.className = "float-item";
 
-      const symbols = ["🐾", "♡", "🐾", "♡"];
+      item.className =
+        "float-item";
+
+
+      const symbols = [
+        "🐾",
+        "♡",
+        "🐾",
+        "♡"
+      ];
+
+
       item.textContent =
-        symbols[Math.floor(Math.random() * symbols.length)];
+        symbols[
+          Math.floor(
+            Math.random() * symbols.length
+          )
+        ];
+
 
       item.style.left =
         Math.random() * 100 + "vw";
 
+
       item.style.fontSize =
         (15 + Math.random() * 15) + "px";
+
 
       item.style.animationDuration =
         (5 + Math.random() * 4) + "s";
 
+
       item.style.color =
         "rgba(190, 135, 130, .28)";
 
+
       document.body.appendChild(item);
 
+
       setTimeout(() => {
+
         item.remove();
+
       }, 9000);
+
     }
 
   </script>
