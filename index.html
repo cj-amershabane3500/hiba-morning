@@ -4,10 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>صباح الخير يا هبة 🤍</title>
+  <title>مكان صغير إلك 🐾</title>
 
   <style>
-
     * {
       margin: 0;
       padding: 0;
@@ -17,1969 +16,532 @@
     body {
       min-height: 100vh;
       font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      color: #4f4347;
       overflow-x: hidden;
-      color: #533f47;
 
       background:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,.95), transparent 28%),
-        radial-gradient(circle at 85% 80%, rgba(255,220,229,.55), transparent 30%),
-        linear-gradient(135deg, #fffaf6, #fdecef);
+        radial-gradient(circle at 15% 15%, rgba(255,255,255,.95), transparent 30%),
+        radial-gradient(circle at 85% 85%, rgba(244,215,202,.50), transparent 35%),
+        linear-gradient(135deg, #fffaf6, #f8eee9);
 
       position: relative;
     }
 
-
-    /* =========================
-       الخلفية
-    ========================= */
-
-    .background-shape {
+    .blob {
       position: fixed;
       border-radius: 50%;
-      filter: blur(4px);
-      opacity: .4;
+      filter: blur(6px);
+      opacity: .35;
       z-index: 0;
-
-      animation: floatShape 10s ease-in-out infinite alternate;
+      animation: blobMove 12s ease-in-out infinite alternate;
     }
 
-    .shape1 {
-      width: 240px;
-      height: 240px;
-      background: #ffd9e2;
-
-      top: -80px;
-      right: -50px;
+    .blob1 {
+      width: 260px;
+      height: 260px;
+      top: -90px;
+      right: -70px;
+      background: #f3d6cf;
     }
 
-    .shape2 {
-      width: 190px;
-      height: 190px;
-      background: #ffeecf;
-
-      bottom: -50px;
-      left: -40px;
-
+    .blob2 {
+      width: 220px;
+      height: 220px;
+      bottom: -70px;
+      left: -60px;
+      background: #eedfc7;
       animation-delay: 2s;
     }
 
-    @keyframes floatShape {
-
+    @keyframes blobMove {
       from {
-        transform: translateY(0) translateX(0);
+        transform: translate(0, 0);
       }
-
       to {
-        transform: translateY(25px) translateX(15px);
+        transform: translate(18px, 22px);
       }
-
     }
 
-
-    /* =========================
-       كفوف الخلفية
-    ========================= */
-
-    .paw-bg {
+    .paws-bg {
       position: fixed;
       inset: 0;
-
       pointer-events: none;
       z-index: 0;
-
       overflow: hidden;
     }
 
     .paw {
       position: absolute;
-
+      opacity: .07;
       font-size: 22px;
-      opacity: .08;
-
-      animation: drift 14s linear infinite;
-
-      user-select: none;
+      animation: pawFloat 10s ease-in-out infinite alternate;
     }
 
-    .paw:nth-child(1) {
-      top: 8%;
-      right: 14%;
-      animation-delay: 0s;
-    }
+    .paw:nth-child(1) { top: 12%; left: 10%; }
+    .paw:nth-child(2) { top: 25%; right: 8%; animation-delay: 2s; }
+    .paw:nth-child(3) { top: 52%; left: 7%; animation-delay: 4s; }
+    .paw:nth-child(4) { top: 70%; right: 12%; animation-delay: 1s; }
+    .paw:nth-child(5) { top: 85%; left: 20%; animation-delay: 3s; }
 
-    .paw:nth-child(2) {
-      top: 18%;
-      left: 10%;
-      animation-delay: 2s;
-    }
-
-    .paw:nth-child(3) {
-      top: 38%;
-      right: 8%;
-      animation-delay: 4s;
-    }
-
-    .paw:nth-child(4) {
-      top: 56%;
-      left: 12%;
-      animation-delay: 1s;
-    }
-
-    .paw:nth-child(5) {
-      top: 74%;
-      right: 16%;
-      animation-delay: 5s;
-    }
-
-    .paw:nth-child(6) {
-      top: 84%;
-      left: 22%;
-      animation-delay: 3s;
-    }
-
-    @keyframes drift {
-
-      0% {
-        transform: translateY(0) translateX(0) rotate(0deg);
-        opacity: .05;
+    @keyframes pawFloat {
+      from {
+        transform: translateY(0) rotate(-4deg);
       }
-
-      50% {
-        transform: translateY(-10px) translateX(8px) rotate(8deg);
-        opacity: .1;
+      to {
+        transform: translateY(-10px) rotate(5deg);
       }
-
-      100% {
-        transform: translateY(0) translateX(0) rotate(0deg);
-        opacity: .05;
-      }
-
     }
-
-
-    /* =========================
-       الصفحة
-    ========================= */
 
     .page {
       min-height: 100vh;
-
-      padding: 24px;
-
       display: flex;
       justify-content: center;
       align-items: center;
-
+      padding: 24px;
       position: relative;
       z-index: 2;
     }
 
-
-    /* =========================
-       البطاقة الرئيسية
-    ========================= */
-
     .card {
-
       width: min(92vw, 650px);
+      padding: 38px 30px;
 
-      padding: 50px 30px 38px;
-
-      background: rgba(255, 255, 255, .72);
-
+      background: rgba(255,255,255,.72);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
 
       border: 1px solid rgba(255,255,255,.95);
-      border-radius: 32px;
+      border-radius: 30px;
 
       box-shadow:
-        0 25px 70px rgba(95, 60, 75, .12),
-        inset 0 1px rgba(255,255,255,.95);
+        0 25px 70px rgba(80,55,60,.10),
+        inset 0 1px rgba(255,255,255,.9);
 
       text-align: center;
-
-      position: relative;
-      overflow: hidden;
-
-      animation: cardAppear 1.1s ease;
+      animation: appear .9s ease;
     }
 
-    @keyframes cardAppear {
-
+    @keyframes appear {
       from {
         opacity: 0;
-        transform: translateY(25px) scale(.98);
+        transform: translateY(18px) scale(.98);
       }
-
       to {
         opacity: 1;
         transform: translateY(0) scale(1);
       }
-
     }
 
-
-    /* =========================
-       القطة
-    ========================= */
-
-    .cat-corner {
-
-      position: absolute;
-
-      top: 10px;
-      left: 14px;
-
-      display: flex;
-      align-items: center;
-
-      gap: 10px;
-
-      z-index: 3;
-
-      direction: ltr;
+    .cat {
+      font-size: 54px;
+      margin-bottom: 8px;
+      display: inline-block;
+      animation: catMove 2.8s ease-in-out infinite alternate;
     }
 
-
-    .cat-body {
-
-      position: relative;
-
-      width: 92px;
-      height: 92px;
-
-      border-radius: 24px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #fff8fb,
-          #ffeef3
-        );
-
-      border:
-        1px solid
-        rgba(228, 191, 203, .6);
-
-      box-shadow:
-        0 8px 24px
-        rgba(210, 155, 173, .14);
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      transition:
-        transform .6s ease,
-        box-shadow .6s ease;
+    @keyframes catMove {
+      from {
+        transform: translateY(0) rotate(-3deg);
+      }
+      to {
+        transform: translateY(-5px) rotate(3deg);
+      }
     }
-
-
-    .cat-body.awake {
-
-      transform:
-        translateY(-2px)
-        rotate(-4deg);
-
-      box-shadow:
-        0 12px 28px
-        rgba(210, 155, 173, .2);
-
-    }
-
-
-    .cat-face {
-
-      font-size: 44px;
-
-      transition:
-        transform .5s ease;
-
-    }
-
-
-    .cat-body.awake .cat-face {
-
-      transform:
-        scale(1.07);
-
-    }
-
-
-    .cat-label {
-
-      position: absolute;
-
-      top: 72px;
-
-      left: 0;
-      right: 0;
-
-      font-size: 12px;
-
-      color: #b08694;
-
-    }
-
-
-    .coffee {
-
-      font-size: 24px;
-
-      transform:
-        translateY(10px);
-
-      opacity: .88;
-
-    }
-
-
-    /* =========================
-       العنوان
-    ========================= */
 
     h1 {
-
-      font-size:
-        clamp(32px, 7vw, 48px);
-
-      color: #6a4b56;
-
-      margin-top: 55px;
+      font-size: clamp(28px, 6vw, 42px);
+      color: #665056;
       margin-bottom: 14px;
-
     }
-
 
     .intro {
-
-      max-width: 480px;
-
-      margin: 0 auto;
-
-      line-height: 2;
-
       font-size: 17px;
-
-      color: #7a636c;
-
+      line-height: 2;
+      color: #78666b;
+      max-width: 500px;
+      margin: 0 auto;
     }
 
-
-    .small-line {
-
-      width: 55px;
+    .divider {
+      width: 50px;
       height: 3px;
-
+      background: #d9aaa3;
       border-radius: 10px;
-
-      background: #e9aebe;
-
       margin: 24px auto;
-
     }
 
-
-    /* =========================
-       الأزرار
-    ========================= */
-
-    button {
-
+    .main-button,
+    .option-button {
       font-family: inherit;
-
       cursor: pointer;
-
       border: none;
-
+      transition: .25s ease;
     }
-
 
     .main-button {
-
-      margin-top: 4px;
-
-      padding:
-        14px 26px;
-
-      border-radius:
-        999px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #e7a6b8,
-          #d98fa5
-        );
-
+      padding: 13px 25px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #dca9a0, #c98f88);
       color: white;
-
       font-size: 16px;
-
-      font-weight: 600;
-
-      box-shadow:
-        0 10px 25px
-        rgba(216, 142, 164, .28);
-
-      transition:
-        transform .25s ease,
-        box-shadow .25s ease;
+      box-shadow: 0 9px 22px rgba(185,120,110,.20);
     }
-
 
     .main-button:hover {
-
-      transform:
-        translateY(-3px);
-
-      box-shadow:
-        0 14px 30px
-        rgba(216, 142, 164, .36);
-
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(185,120,110,.28);
     }
 
-
-    .main-button:active {
-
-      transform:
-        scale(.97);
-
-    }
-
-
-    /* =========================
-       الرسالة الأساسية
-    ========================= */
-
-    #hiddenMessage {
-
+    #mainMessage {
       max-height: 0;
-
       opacity: 0;
-
       overflow: hidden;
-
-      transition:
-        max-height 1s ease,
-        opacity 1s ease,
-        margin 1s ease;
-
       margin-top: 0;
-
-    }
-
-
-    #hiddenMessage.show {
-
-      max-height: 1500px;
-
-      opacity: 1;
-
-      margin-top: 30px;
-
-    }
-
-
-    .cat-awake-note {
-
-      margin-bottom: 18px;
-
-      font-size: 14px;
-
-      color: #b08591;
-
-      opacity: 0;
-
-      transform:
-        translateY(6px);
-
       transition:
-        .6s ease;
-
+        max-height .9s ease,
+        opacity .9s ease,
+        margin .9s ease;
     }
 
-
-    .cat-awake-note.show {
-
+    #mainMessage.show {
+      max-height: 1000px;
       opacity: 1;
-
-      transform:
-        translateY(0);
-
+      margin-top: 28px;
     }
-
 
     .message-box {
-
       padding: 24px;
-
-      background:
-        rgba(255,255,255,.64);
-
-      border:
-        1px solid
-        rgba(234, 184, 198, .45);
-
-      border-radius: 24px;
-
+      border-radius: 22px;
+      background: rgba(255,255,255,.58);
+      border: 1px solid rgba(215,177,168,.38);
+      font-size: 16px;
       line-height: 2;
-
-      font-size: 17px;
-
+      color: #65545a;
     }
-
 
     .message-box strong {
-
-      color: #cb7791;
-
+      color: #bd7c77;
     }
 
-
-    /* =========================
-       رسائل اليوم
-    ========================= */
-
-    .daily-section {
-
-      margin-top: 30px;
-
-      padding-top: 25px;
-
-      border-top:
-        1px solid
-        rgba(120, 90, 100, .12);
-
+    .choices {
+      margin-top: 28px;
+      display: grid;
+      gap: 12px;
     }
 
-
-    .daily-title {
-
+    .choice-title {
+      color: #9a8287;
       font-size: 14px;
-
-      color: #a28790;
-
-      margin-bottom: 12px;
-
+      margin-bottom: 3px;
     }
 
-
-    .daily-button {
-
-      background:
-        transparent;
-
-      color: #c3798f;
-
-      border:
-        1px solid
-        #e4b3c1;
-
-      padding:
-        11px 22px;
-
-      border-radius:
-        999px;
-
+    .option-button {
+      width: 100%;
+      padding: 12px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(215,177,168,.4);
+      color: #7a5f66;
       font-size: 15px;
-
-      transition:
-        background .25s,
-        transform .25s,
-        box-shadow .25s;
-
     }
 
-
-    .daily-button:hover {
-
-      background:
-        #fff5f7;
-
-      transform:
-        translateY(-2px);
-
-      box-shadow:
-        0 8px 18px
-        rgba(205, 139, 158, .12);
-
+    .option-button:hover {
+      background: #fff9f7;
+      transform: translateY(-2px);
     }
 
-
-    .daily-button:active {
-
-      transform:
-        scale(.97);
-
-    }
-
-
-    #dailyMessageBox {
-
-      min-height: 30px;
-
-      margin-top: 17px;
-
-      font-size: 15px;
-
-      line-height: 1.9;
-
-      color: #705a62;
-
-      opacity: 0;
-
-      transform:
-        translateY(5px);
-
-      transition:
-        opacity .5s ease,
-        transform .5s ease;
-
-    }
-
-
-    #dailyMessageBox.visible {
-
-      opacity: 1;
-
-      transform:
-        translateY(0);
-
-    }
-
-
-    #dailyHint {
-
-      margin-top: 9px;
-
-      font-size: 12px;
-
-      color: #b49ca4;
-
-      opacity: 0;
-
-      transform:
-        translateY(4px);
-
-      transition:
-        opacity .6s ease,
-        transform .6s ease;
-
-    }
-
-
-    #dailyHint.visible {
-
-      opacity: 1;
-
-      transform:
-        translateY(0);
-
-    }
-
-
-    /* =========================
-       مفاجأة الضغط الرابع
-    ========================= */
-
-    #specialMessage {
-
-      max-height: 0;
-
-      overflow: hidden;
-
-      opacity: 0;
-
-      margin-top: 0;
-
-      padding:
-        0 18px;
-
-      color: #c56f89;
-
-      font-size: 14px;
-
-      line-height: 1.8;
-
-      transition:
-        max-height .8s ease,
-        opacity .8s ease,
-        margin .8s ease,
-        padding .8s ease;
-
-    }
-
-
-    #specialMessage.show {
-
-      max-height: 170px;
-
-      opacity: 1;
-
-      margin-top: 18px;
-
-      padding:
-        14px 18px;
-
-      background:
-        rgba(255, 245, 248, .72);
+    #responseBox {
+      min-height: 0;
+      margin-top: 16px;
+      padding: 0 16px;
 
       border-radius: 18px;
+      background: rgba(250,242,238,.7);
 
-    }
+      color: #65545a;
+      font-size: 15px;
+      line-height: 1.9;
 
-
-    /* =========================
-       النهاية
-    ========================= */
-
-    .footer {
-
-      margin-top: 32px;
-
-      color: #ab959d;
-
-      font-size: 13px;
-
-      line-height: 1.8;
-
-    }
-
-
-    /* =========================
-       العناصر الطائرة
-    ========================= */
-
-    .float-item {
-
-      position: fixed;
-
-      bottom: -40px;
-
-      pointer-events: none;
-
-      z-index: 1100;
-
-      animation:
-        rise linear forwards;
-
+      max-height: 0;
       opacity: 0;
-
-    }
-
-
-    @keyframes rise {
-
-      0% {
-
-        transform:
-          translateY(0)
-          rotate(0deg);
-
-        opacity: 0;
-
-      }
-
-      15% {
-
-        opacity: 1;
-
-      }
-
-      100% {
-
-        transform:
-          translateY(-110vh)
-          rotate(25deg);
-
-        opacity: 0;
-
-      }
-
-    }
-
-
-    /* =============================================
-       المفاجأة السرية - بعد 7 ضغطات
-    ============================================= */
-
-    #secretSurprise {
-
-      position: fixed;
-
-      inset: 0;
-
-      z-index: 1000;
-
-      display: flex;
-
-      justify-content: center;
-      align-items: center;
-
-      padding: 25px;
-
-      background:
-        rgba(74, 49, 59, .20);
-
-      backdrop-filter:
-        blur(9px);
-
-      -webkit-backdrop-filter:
-        blur(9px);
-
-      opacity: 0;
-
-      visibility: hidden;
+      overflow: hidden;
 
       transition:
+        max-height .6s ease,
         opacity .6s ease,
-        visibility .6s ease;
-
+        padding .6s ease;
     }
 
-
-    #secretSurprise.show {
-
+    #responseBox.show {
+      max-height: 260px;
       opacity: 1;
-
-      visibility: visible;
-
+      padding: 16px;
     }
 
-
-    .secret-card {
-
-      width:
-        min(90vw, 440px);
-
-      padding:
-        34px 28px;
-
-      border-radius:
-        30px;
-
-      text-align: center;
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,.96),
-          rgba(255,241,246,.96)
-        );
-
-      border:
-        1px solid
-        rgba(255,255,255,.95);
-
-      box-shadow:
-        0 30px 90px
-        rgba(97, 60, 75, .25);
-
-      transform:
-        scale(.75)
-        translateY(25px);
-
-      opacity: 0;
-
-      transition:
-        transform .65s
-        cubic-bezier(.2,.9,.3,1.2),
-        opacity .65s ease;
-
-      position: relative;
-
-    }
-
-
-    #secretSurprise.show
-    .secret-card {
-
-      transform:
-        scale(1)
-        translateY(0);
-
-      opacity: 1;
-
-    }
-
-
-    .secret-cat {
-
-      font-size: 54px;
-
-      margin-bottom: 12px;
-
-      animation:
-        secretCat 1.2s
-        ease-in-out infinite alternate;
-
-    }
-
-
-    @keyframes secretCat {
-
-      from {
-
-        transform:
-          rotate(-5deg)
-          translateY(0);
-
-      }
-
-      to {
-
-        transform:
-          rotate(5deg)
-          translateY(-5px);
-
-      }
-
-    }
-
-
-    .secret-title {
-
-      font-size: 23px;
-
-      color: #c36e88;
-
-      margin-bottom: 18px;
-
-      font-weight: 700;
-
-    }
-
-
-    .secret-text {
-
-      color: #705a62;
-
-      font-size: 16px;
-
-      line-height: 2;
-
-    }
-
-
-    .secret-text strong {
-
-      color: #cb7791;
-
-    }
-
-
-    .secret-small {
-
-      margin-top: 16px;
-
-      color: #ae939c;
-
-      font-size: 12px;
-
-    }
-
-
-    .close-secret {
-
-      margin-top: 22px;
-
-      padding:
-        11px 23px;
-
-      border-radius:
-        999px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #e7a6b8,
-          #d98fa5
-        );
-
-      color: white;
+    .little-note {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(125,95,100,.10);
 
       font-size: 14px;
+      color: #9b858a;
 
-      box-shadow:
-        0 8px 20px
-        rgba(216, 142, 164, .22);
+      opacity: 0;
+      transform: translateY(6px);
 
-      transition:
-        transform .25s ease;
-
+      transition: .8s ease;
     }
 
-
-    .close-secret:hover {
-
-      transform:
-        translateY(-2px);
-
+    .little-note.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-
-    .close-secret:active {
-
-      transform:
-        scale(.96);
-
+    .footer {
+      margin-top: 24px;
+      font-size: 12px;
+      color: #b09ca0;
     }
 
+    .float-item {
+      position: fixed;
+      bottom: -30px;
+      z-index: 20;
+      pointer-events: none;
+      opacity: 0;
+      animation: rise linear forwards;
+    }
 
-    /* =========================
-       موبايل
-    ========================= */
+    @keyframes rise {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      15% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) rotate(20deg);
+        opacity: 0;
+      }
+    }
 
-    @media (max-width: 560px) {
-
+    @media (max-width: 520px) {
       .card {
-
-        padding:
-          46px 22px 34px;
-
-        border-radius:
-          28px;
-
+        padding: 34px 21px;
+        border-radius: 25px;
       }
-
-
-      h1 {
-
-        margin-top: 70px;
-
-      }
-
 
       .intro,
       .message-box {
-
         font-size: 16px;
-
       }
 
-
-      .cat-corner {
-
-        top: 10px;
-        left: 10px;
-
+      .cat {
+        font-size: 48px;
       }
-
-
-      .cat-body {
-
-        width: 82px;
-        height: 82px;
-
-      }
-
-
-      .cat-face {
-
-        font-size: 38px;
-
-      }
-
-
-      .coffee {
-
-        font-size: 22px;
-
-      }
-
-
-      .secret-card {
-
-        padding:
-          30px 23px;
-
-      }
-
-
-      .secret-title {
-
-        font-size: 21px;
-
-      }
-
-
-      .secret-text {
-
-        font-size: 15px;
-
-      }
-
     }
-
   </style>
 </head>
 
-
 <body>
 
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
 
-  <!-- الخلفية -->
-
-  <div class="background-shape shape1"></div>
-
-  <div class="background-shape shape2"></div>
-
-
-  <!-- كفوف خفيفة بالخلفية -->
-
-  <div class="paw-bg">
-
+  <div class="paws-bg">
     <span class="paw">🐾</span>
     <span class="paw">🐾</span>
     <span class="paw">🐾</span>
-
     <span class="paw">🐾</span>
     <span class="paw">🐾</span>
-    <span class="paw">🐾</span>
-
   </div>
-
-
-
-  <!-- الصفحة -->
 
   <div class="page">
 
     <main class="card">
 
+      <div class="cat" id="cat">😺</div>
 
-      <!-- القطة -->
-
-      <div class="cat-corner">
-
-        <div
-          class="cat-body"
-          id="catBody"
-        >
-
-          <div
-            class="cat-face"
-            id="catFace"
-          >
-            😽
-          </div>
-
-          <div
-            class="cat-label"
-            id="catLabel"
-          >
-            القطة لسا نايمة شوي 💤
-          </div>
-
-        </div>
-
-        <div class="coffee">
-          ☕
-        </div>
-
-      </div>
-
-
-
-      <!-- العنوان -->
-
-      <h1>
-        صباح الخير يا هبة 🤍
-      </h1>
-
+      <h1>ملاحظة صغيرة إلك 🐾</h1>
 
       <p class="intro">
-
-        قبل ما يبلش يومك يا بطلتي...
-
+        اليوم ما في مفاجأة كبيرة...
         <br>
-
-        في حدا حب يتركلك هون سبب صغير
-        يخلي بداية يومك ألطف شوي.
-
+        بس في شغلة صغيرة حبيت قلك ياها.
       </p>
 
+      <div class="divider"></div>
 
-      <div class="small-line"></div>
-
-
-
-      <!-- الزر الأساسي -->
-
-      <button
-        class="main-button"
-        onclick="openMessage()"
-      >
-
-        القطة مخبّيتلك شي 🐾
-
+      <button class="main-button" onclick="openMessage()">
+        طيب شو هي؟ 👀
       </button>
 
-
-
-      <!-- الرسالة -->
-
-      <section id="hiddenMessage">
-
-
-        <div
-          class="cat-awake-note"
-          id="catAwakeNote"
-        >
-
-          صحيت القطة وقررت
-          تعطيكي الرسالة بنفسها 😺🐾
-
-        </div>
-
-
+      <section id="mainMessage">
 
         <div class="message-box">
 
-          بتمنى أول شي يصادفك اليوم يكون
+          مو لازم تكوني مبسوطة كرمال نحكي.
+
+          <br><br>
+
+          ومو لازم يكون مزاجك منيح كرمال أشوفك.
+
+          <br><br>
+
+          إذا كنتي زعلانة، معصبة، تعبانة
+          أو حتى ما إلك خُلُق تحكي...
+
+          <br><br>
 
           <strong>
-            ابتسامة.
+            فيكي تكوني متل ما إنتِ وبس.
           </strong>
 
-
           <br><br>
 
-
-          وبتمنى يكون يومك أخف على قلبك،
-
-          وفيه أشياء حلوة
-          حتى لو كانت صغيرة.
-
-
-          <br><br>
-
-
-          وإذا ما كان اليوم مثالي...
-
-          عادي.
-
-
-          <br>
-
-
-          المهم تذكري إنك مو مطالبة
-          تربحي كل معارك الدنيا بيوم واحد.
-
-
-          <br><br>
-
-
-          خدي يومك شوي شوي،
-
-          وكوني لطيفة مع حالك.
-
-
-          <br><br>
-
-
-          وبس حبيت ذكّرك...
-
-
-          <br>
-
-
-          <strong>
-
-            في حدا هون
-            بيتمنى يشوفك مبسوطة 🤍
-
-          </strong>
+          مو كل وجود لازم يكون معه شرح،
+          ومو كل سكوت لازم نصلحه.
 
         </div>
 
 
+        <div class="choices">
 
-        <!-- رسائل اليوم -->
-
-        <div class="daily-section">
-
-
-          <div class="daily-title">
-
-            وفي كمان رسالة صغيرة لليوم...
-
+          <div class="choice-title">
+            والقطة عندها كم جواب جاهز حسب الحالة 😼
           </div>
 
-
-
-          <button
-
-            id="dailyButton"
-
-            class="daily-button"
-
-            onclick="showDailyMessage()"
-
-          >
-
-            رسالة اليوم ✨
-
+          <button class="option-button" onclick="answer('silent')">
+            وإذا ما إلي خلق أحكي؟ 💤
           </button>
 
+          <button class="option-button" onclick="answer('angry')">
+            وإذا كنت معصبة؟ 😾
+          </button>
 
+          <button class="option-button" onclick="answer('badDay')">
+            وإذا كان يومي سيئ؟ 🌧️
+          </button>
 
-          <div id="dailyMessageBox"></div>
-
-
-
-          <div id="dailyHint">
-
-            فيكي تجربي مرة تانية…
-
-            يمكن الرسالة الجاية
-            تعجبك أكتر 👀✨
-
-          </div>
-
-
-
-          <div id="specialMessage">
-
-            حتى القطة صارت مستغربة
-            قديش عم تدوري عالرسائل 😼🤍
-
-            <br>
-
-            واضح إنك حبيتي الفكرة...
-
-            وهاد كان متوقَّع بصراحة 🐾
-
-          </div>
-
+          <div id="responseBox"></div>
 
         </div>
 
+
+        <div class="little-note" id="littleNote">
+          وبيناتنا…
+          <br>
+          يمكن بهمني أمرك أكتر من ما ببيّن أحياناً 🤍
+        </div>
 
       </section>
 
-
-
-      <!-- النهاية -->
-
       <div class="footer">
-
-        موافَق عليه من قسم القطط الصباحية 🐾
-
+        القطة بتقول إن المزاج السيئ ما بيلغي حقك بالراحة 🐾
       </div>
-
 
     </main>
 
   </div>
 
 
-
-  <!-- =========================================
-       المفاجأة السرية
-  ========================================== -->
-
-  <div
-    id="secretSurprise"
-    onclick="closeSecretFromOutside(event)"
-  >
-
-    <div class="secret-card">
-
-
-      <div class="secret-cat">
-
-        😼
-
-      </div>
-
-
-      <div class="secret-title">
-
-        اكتشفتي السر 🤫🐾
-
-      </div>
-
-
-      <div class="secret-text">
-
-        بما إنك وصلتي لهون...
-
-        <br>
-
-        هالمرة الرسالة
-        <strong>
-          مو من القطة
-        </strong>
-
-        😌
-
-
-        <br><br>
-
-
-        صباحك حلو يا بطلتي،
-
-        وبتمنى اليوم يعطيكي
-        ولو سبب صغير
-
-        <br>
-
-        يخليكي تبتسمي
-        <strong>
-          من قلبك 🤍
-        </strong>
-
-      </div>
-
-
-      <div class="secret-small">
-
-        القطة أنكرت أي علاقة
-        بهالرسالة 🐾
-
-      </div>
-
-
-      <button
-        class="close-secret"
-        onclick="closeSecret()"
-      >
-
-        خلي السر بيناتنا 🤫
-
-      </button>
-
-
-    </div>
-
-  </div>
-
-
-
   <script>
 
-
     let opened = false;
-
-    let lastMessageIndex = -1;
-
-    let clickCount = 0;
-
-    let secretShown = false;
-
-
-
-    /* =========================
-       الرسائل
-    ========================= */
-
-    const messages = [
-
-      "مهمة اليوم: ابتسامة وحدة عالأقل... والباقي منحلّه بعدين 😌",
-
-      "ما لازم يكون كل شي مثالي حتى يكون اليوم حلو 🤍",
-
-      "خدي الأمور شوي شوي... اليوم مو سباق 🌷",
-
-      "يمكن أحلى شي يصير اليوم لسا ما صار ✨",
-
-      "لا تنسي تعطي حالك نفس اللطف يلي بتعطيه للناس 🤍",
-
-      "شوي قهوة، شوي هدوء، وشوي ثقة إن اليوم ممكن يكون حلو ☕",
-
-      "تذكير بسيط: وجودك لحاله بيضيف شي حلو لهالدنيا 🌸",
-
-      "إذا صار شي مو على مزاجك اليوم، لا تعطيه أكبر من حجمه... كمّلي يومك 🤍",
-
-      "كل يوم جديد فرصة صغيرة نرتّب حالنا من أول وجديد 🌷",
-
-      "مو مطلوب منك اليوم إلا إنك تعملي يلي عليكي وتكوني منيحة مع حالك ✨",
-
-      "إذا تعبتي، ارتاحي شوي... الراحة مو خسارة وقت 🤍",
-
-      "يمكن اليوم يحمللك موقف صغير يغير مزاجك كله للأحسن 🌸",
-
-      "اليوم حاولي ما تكوني قاسية على حالك... خليكي بصالحك شوي 😌",
-
-      "بداية اليوم ما بتحدد نهايته... حتى لو بلش عادي ممكن ينتهي حلو 🤍",
-
-      "وإذا ما في سبب للابتسامة هلق... اعتبري هاي الرسالة سبب صغير 🌷",
-
-      "ما تنسي إنك أقوى من كتير أيام مرقت عليكي وقلتي ما رح تقدري عليها ✨",
-
-      "خدي نفس عميق... ولسا في كتير أشياء حلوة ممكن تصير اليوم 🤍",
-
-      "إذا اليوم كان هادي، استمتعي فيه... وإذا كان مزعج، لا تخليه يسرق منك كل اليوم 🌸"
-
-    ];
-
-
-
-    /* =========================
-       فتح الرسالة
-    ========================= */
+    let optionClicks = 0;
 
     function openMessage() {
 
+      const message = document.getElementById("mainMessage");
+      const cat = document.getElementById("cat");
 
-      const message =
-        document.getElementById(
-          "hiddenMessage"
-        );
-
-
-      const catBody =
-        document.getElementById(
-          "catBody"
-        );
-
-
-      const catFace =
-        document.getElementById(
-          "catFace"
-        );
-
-
-      const catLabel =
-        document.getElementById(
-          "catLabel"
-        );
-
-
-      const catAwakeNote =
-        document.getElementById(
-          "catAwakeNote"
-        );
-
-
-
-      message.classList.add(
-        "show"
-      );
-
-
+      message.classList.add("show");
 
       if (!opened) {
 
-
         opened = true;
 
+        cat.textContent = "😸";
 
-        catBody.classList.add(
-          "awake"
-        );
-
-
-        catFace.textContent =
-          "😺";
-
-
-        catLabel.textContent =
-          "صحيت القطة وصارت جاهزة 🐾";
-
-
-
-        setTimeout(() => {
-
-          catAwakeNote.classList.add(
-            "show"
-          );
-
-        }, 450);
-
-
-
-        for (
-          let i = 0;
-          i < 10;
-          i++
-        ) {
-
+        for (let i = 0; i < 8; i++) {
           setTimeout(() => {
-
-            createFloatItem();
-
-          }, i * 170);
-
+            createFloat();
+          }, i * 160);
         }
-
       }
-
     }
 
 
+    function answer(type) {
 
-    /* =========================
-       رسالة اليوم
-    ========================= */
+      const box = document.getElementById("responseBox");
+      const note = document.getElementById("littleNote");
 
-    function showDailyMessage() {
+      let text = "";
 
-
-      const box =
-        document.getElementById(
-          "dailyMessageBox"
-        );
-
-
-      const hint =
-        document.getElementById(
-          "dailyHint"
-        );
-
-
-      const button =
-        document.getElementById(
-          "dailyButton"
-        );
-
-
-      const special =
-        document.getElementById(
-          "specialMessage"
-        );
-
-
-
-      clickCount++;
-
-
-
-      let newIndex;
-
-
-
-      do {
-
-        newIndex =
-          Math.floor(
-            Math.random()
-            * messages.length
-          );
-
+      if (type === "silent") {
+        text =
+          "ولا مشكلة. منمشي شوي، منقعد شوي، أو منضل ساكتين. مو لازم يكون في حكي طول الوقت 🐾";
       }
 
-      while (
+      if (type === "angry") {
+        text =
+          "مسموح 😼 مو مطلوب منك تكوني لطيفة ومبتسمة طول الوقت. حتى القطة بتعصب أحياناً.";
+      }
 
-        newIndex ===
-        lastMessageIndex
+      if (type === "badDay") {
+        text =
+          "مو كل يوم لازم ينربح. في أيام بيكفي إننا نمرقها بهدوء ونوصل لآخرها 🤍";
+      }
 
-        &&
-
-        messages.length > 1
-
-      );
-
-
-
-      lastMessageIndex =
-        newIndex;
-
-
-
-      box.classList.remove(
-        "visible"
-      );
-
-
+      box.classList.remove("show");
 
       setTimeout(() => {
+        box.textContent = text;
+        box.classList.add("show");
+      }, 150);
 
+      optionClicks++;
 
-        box.textContent =
-          messages[newIndex];
-
-
-        box.classList.add(
-          "visible"
-        );
-
-
-      }, 180);
-
-
-
-      /* أول ضغطة */
-
-      if (
-        clickCount === 1
-      ) {
-
-
+      if (optionClicks >= 2) {
         setTimeout(() => {
-
-          hint.classList.add(
-            "visible"
-          );
-
-        }, 650);
-
-
-        button.textContent =
-          "رسالة تانية؟ 🌷";
-
+          note.classList.add("show");
+        }, 450);
       }
-
-
-
-      /* رابع ضغطة */
-
-      if (
-        clickCount >= 4
-      ) {
-
-        special.classList.add(
-          "show"
-        );
-
-      }
-
-
-
-      if (
-        clickCount === 4
-      ) {
-
-
-        for (
-          let i = 0;
-          i < 6;
-          i++
-        ) {
-
-          setTimeout(() => {
-
-            createFloatItem();
-
-          }, i * 150);
-
-        }
-
-      }
-
-
-
-      /* =========================
-         المفاجأة السرية
-         بعد 7 ضغطات
-      ========================= */
-
-      if (
-        clickCount === 7
-        &&
-        !secretShown
-      ) {
-
-
-        secretShown = true;
-
-
-        setTimeout(() => {
-
-          showSecret();
-
-        }, 650);
-
-      }
-
     }
 
 
+    function createFloat() {
 
-    /* =========================
-       إظهار السر
-    ========================= */
+      const item = document.createElement("div");
 
-    function showSecret() {
+      item.className = "float-item";
 
-
-      const secret =
-        document.getElementById(
-          "secretSurprise"
-        );
-
-
-      secret.classList.add(
-        "show"
-      );
-
-
-
-      /*
-       كمية أكبر من
-       القلوب والكفوف
-      */
-
-      for (
-        let i = 0;
-        i < 18;
-        i++
-      ) {
-
-        setTimeout(() => {
-
-          createFloatItem();
-
-        }, i * 90);
-
-      }
-
-    }
-
-
-
-    /* =========================
-       إغلاق السر
-    ========================= */
-
-    function closeSecret() {
-
-
-      const secret =
-        document.getElementById(
-          "secretSurprise"
-        );
-
-
-      secret.classList.remove(
-        "show"
-      );
-
-    }
-
-
-
-    /*
-     إذا ضغطت خارج البطاقة
-    */
-
-    function closeSecretFromOutside(
-      event
-    ) {
-
-
-      if (
-
-        event.target.id ===
-        "secretSurprise"
-
-      ) {
-
-        closeSecret();
-
-      }
-
-    }
-
-
-
-    /* =========================
-       قلوب + كفوف
-    ========================= */
-
-    function createFloatItem() {
-
-
-      const item =
-        document.createElement(
-          "div"
-        );
-
-
-      item.className =
-        "float-item";
-
-
-
-      const symbols = [
-
-        "♡",
-        "🐾",
-        "♡",
-        "🐾",
-        "♡"
-
-      ];
-
-
-
-      const chosen =
-        symbols[
-          Math.floor(
-            Math.random()
-            * symbols.length
-          )
-        ];
-
-
-
+      const symbols = ["🐾", "♡", "🐾", "♡"];
       item.textContent =
-        chosen;
-
-
+        symbols[Math.floor(Math.random() * symbols.length)];
 
       item.style.left =
-        Math.random()
-        * 100
-        + "vw";
-
-
+        Math.random() * 100 + "vw";
 
       item.style.fontSize =
-        (
-          16
-          +
-          Math.random()
-          * 16
-        )
-        + "px";
-
-
+        (15 + Math.random() * 15) + "px";
 
       item.style.animationDuration =
-        (
-          5
-          +
-          Math.random()
-          * 4
-        )
-        + "s";
-
-
+        (5 + Math.random() * 4) + "s";
 
       item.style.color =
+        "rgba(190, 135, 130, .28)";
 
-        chosen === "🐾"
-
-        ?
-
-        "rgba(193, 143, 158, 0.35)"
-
-        :
-
-        "rgba(221, 143, 165, 0.35)";
-
-
-
-      document.body.appendChild(
-        item
-      );
-
-
+      document.body.appendChild(item);
 
       setTimeout(() => {
-
         item.remove();
-
       }, 9000);
-
     }
 
   </script>
-
 
 </body>
 </html>
