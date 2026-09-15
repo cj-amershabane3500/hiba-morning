@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>مكان صغير إلك 🐾</title>
+  <title>تفاصيل صغيرة من يوم عادي 🐾</title>
 
   <style>
     * {
@@ -20,9 +20,9 @@
       overflow-x: hidden;
 
       background:
-        radial-gradient(circle at 15% 15%, rgba(255,255,255,.95), transparent 30%),
-        radial-gradient(circle at 85% 85%, rgba(244,215,202,.50), transparent 35%),
-        linear-gradient(135deg, #fffaf6, #f8eee9);
+        radial-gradient(circle at 20% 15%, rgba(255,255,255,.92), transparent 28%),
+        radial-gradient(circle at 85% 80%, rgba(235,215,198,.48), transparent 32%),
+        linear-gradient(135deg, #fffaf6, #f6efe9);
 
       position: relative;
     }
@@ -30,90 +30,64 @@
     .blob {
       position: fixed;
       border-radius: 50%;
-      filter: blur(6px);
+      filter: blur(8px);
       opacity: .35;
       z-index: 0;
-      animation: blobMove 12s ease-in-out infinite alternate;
+      animation: moveBlob 12s ease-in-out infinite alternate;
     }
 
     .blob1 {
-      width: 260px;
-      height: 260px;
-      top: -90px;
+      width: 250px;
+      height: 250px;
+      top: -80px;
       right: -70px;
-      background: #f3d6cf;
+      background: #f1d8d0;
     }
 
     .blob2 {
-      width: 220px;
-      height: 220px;
-      bottom: -70px;
-      left: -60px;
-      background: #eedfc7;
+      width: 210px;
+      height: 210px;
+      bottom: -60px;
+      left: -50px;
+      background: #eadfcf;
       animation-delay: 2s;
     }
 
-    @keyframes blobMove {
+    @keyframes moveBlob {
       from {
         transform: translate(0, 0);
       }
-
       to {
-        transform: translate(18px, 22px);
+        transform: translate(20px, 18px);
       }
     }
 
-    .paws-bg {
+    .paw-bg {
       position: fixed;
       inset: 0;
       pointer-events: none;
       z-index: 0;
-      overflow: hidden;
     }
 
     .paw {
       position: absolute;
-      opacity: .07;
+      opacity: .06;
       font-size: 22px;
       animation: pawFloat 10s ease-in-out infinite alternate;
     }
 
-    .paw:nth-child(1) {
-      top: 12%;
-      left: 10%;
-    }
-
-    .paw:nth-child(2) {
-      top: 25%;
-      right: 8%;
-      animation-delay: 2s;
-    }
-
-    .paw:nth-child(3) {
-      top: 52%;
-      left: 7%;
-      animation-delay: 4s;
-    }
-
-    .paw:nth-child(4) {
-      top: 70%;
-      right: 12%;
-      animation-delay: 1s;
-    }
-
-    .paw:nth-child(5) {
-      top: 85%;
-      left: 20%;
-      animation-delay: 3s;
-    }
+    .paw:nth-child(1) { top: 10%; left: 12%; }
+    .paw:nth-child(2) { top: 28%; right: 10%; animation-delay: 2s; }
+    .paw:nth-child(3) { top: 50%; left: 8%; animation-delay: 4s; }
+    .paw:nth-child(4) { top: 70%; right: 13%; animation-delay: 1s; }
+    .paw:nth-child(5) { top: 87%; left: 18%; animation-delay: 3s; }
 
     @keyframes pawFloat {
       from {
-        transform: translateY(0) rotate(-4deg);
+        transform: translateY(0) rotate(-5deg);
       }
-
       to {
-        transform: translateY(-10px) rotate(5deg);
+        transform: translateY(-9px) rotate(5deg);
       }
     }
 
@@ -128,12 +102,12 @@
     }
 
     .card {
-      width: min(92vw, 650px);
-      padding: 38px 30px;
+      width: min(92vw, 680px);
+      padding: 40px 28px;
 
       background: rgba(255,255,255,.72);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
 
       border: 1px solid rgba(255,255,255,.95);
       border-radius: 30px;
@@ -159,8 +133,8 @@
     }
 
     .cat {
-      font-size: 54px;
-      margin-bottom: 8px;
+      font-size: 52px;
+      margin-bottom: 10px;
       display: inline-block;
       animation: catMove 2.8s ease-in-out infinite alternate;
     }
@@ -177,187 +151,125 @@
 
     h1 {
       font-size: clamp(28px, 6vw, 42px);
-      color: #665056;
-      margin-bottom: 14px;
+      color: #675258;
+      margin-bottom: 12px;
     }
 
     .intro {
       font-size: 17px;
       line-height: 2;
-      color: #78666b;
-      max-width: 500px;
+      color: #7a696d;
+      max-width: 520px;
       margin: 0 auto;
     }
 
     .divider {
-      width: 50px;
+      width: 52px;
       height: 3px;
-      background: #d9aaa3;
       border-radius: 10px;
+      background: #d9aaa3;
       margin: 24px auto;
     }
 
-    .main-button,
-    .option-button {
+    .day-items {
+      display: grid;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .day-button {
+      width: 100%;
+      padding: 15px 18px;
+      border: 1px solid rgba(215,177,168,.42);
+      border-radius: 20px;
+
+      background: rgba(255,255,255,.75);
+      color: #705b61;
+
       font-family: inherit;
+      font-size: 16px;
+
       cursor: pointer;
-      border: none;
       transition: .25s ease;
     }
 
-    .main-button {
-      padding: 13px 25px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #dca9a0, #c98f88);
-      color: white;
-      font-size: 16px;
-      box-shadow: 0 9px 22px rgba(185,120,110,.20);
-    }
-
-    .main-button:hover {
+    .day-button:hover {
+      background: #fffaf7;
       transform: translateY(-2px);
-      box-shadow: 0 12px 26px rgba(185,120,110,.28);
+      box-shadow: 0 8px 20px rgba(130,90,90,.07);
     }
 
-    #mainMessage {
+    .day-button:active {
+      transform: scale(.98);
+    }
+
+    #messageBox {
       max-height: 0;
       opacity: 0;
       overflow: hidden;
+
       margin-top: 0;
+      padding: 0 20px;
 
-      transition:
-        max-height .9s ease,
-        opacity .9s ease,
-        margin .9s ease;
-    }
+      border-radius: 20px;
 
-    #mainMessage.show {
-      max-height: 1200px;
-      opacity: 1;
-      margin-top: 28px;
-    }
+      background: rgba(250,244,240,.8);
 
-    .message-box {
-      padding: 24px;
-      border-radius: 22px;
-      background: rgba(255,255,255,.58);
-      border: 1px solid rgba(215,177,168,.38);
-      font-size: 16px;
+      color: #645359;
+      font-size: 15px;
       line-height: 2;
-      color: #65545a;
-    }
-
-    .message-box strong {
-      color: #bd7c77;
-    }
-
-    .hero-note {
-      margin-top: 20px;
-      padding: 16px 18px;
-
-      border-radius: 18px;
-
-      background: rgba(255, 248, 245, .72);
-
-      border: 1px solid rgba(215,177,168,.32);
-
-      color: #8a6d72;
-
-      font-size: 15px;
-      line-height: 1.9;
-
-      box-shadow: 0 8px 20px rgba(120, 90, 90, .05);
-    }
-
-    .hero-note strong {
-      color: #b97772;
-    }
-
-    .choices {
-      margin-top: 28px;
-      display: grid;
-      gap: 12px;
-    }
-
-    .choice-title {
-      color: #9a8287;
-      font-size: 14px;
-      margin-bottom: 3px;
-    }
-
-    .option-button {
-      width: 100%;
-      padding: 12px 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,.72);
-      border: 1px solid rgba(215,177,168,.4);
-      color: #7a5f66;
-      font-size: 15px;
-    }
-
-    .option-button:hover {
-      background: #fff9f7;
-      transform: translateY(-2px);
-    }
-
-    #responseBox {
-      min-height: 0;
-      margin-top: 16px;
-      padding: 0 16px;
-
-      border-radius: 18px;
-      background: rgba(250,242,238,.7);
-
-      color: #65545a;
-      font-size: 15px;
-      line-height: 1.9;
-
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
 
       transition:
         max-height .6s ease,
         opacity .6s ease,
+        margin .6s ease,
         padding .6s ease;
     }
 
-    #responseBox.show {
-      max-height: 260px;
+    #messageBox.show {
+      max-height: 280px;
       opacity: 1;
-      padding: 16px;
+      margin-top: 18px;
+      padding: 18px 20px;
     }
 
-    .little-note {
+    .summary {
       margin-top: 28px;
-      padding-top: 20px;
+      padding: 18px 20px;
 
-      border-top:
-        1px solid rgba(125,95,100,.10);
+      border-radius: 20px;
 
-      font-size: 14px;
-      color: #9b858a;
+      background: rgba(255,248,245,.72);
+      border: 1px solid rgba(215,177,168,.30);
+
+      color: #8b7076;
+      font-size: 15px;
+      line-height: 1.9;
 
       opacity: 0;
-      transform: translateY(6px);
+      transform: translateY(8px);
 
       transition: .8s ease;
     }
 
-    .little-note.show {
+    .summary.show {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    .summary strong {
+      color: #b77b75;
     }
 
     .footer {
       margin-top: 24px;
       font-size: 12px;
-      color: #b09ca0;
+      color: #ad999d;
     }
 
     .float-item {
       position: fixed;
-      bottom: -30px;
+      bottom: -35px;
       z-index: 20;
       pointer-events: none;
       opacity: 0;
@@ -382,21 +294,20 @@
 
     @media (max-width: 520px) {
       .card {
-        padding: 34px 21px;
+        padding: 34px 20px;
         border-radius: 25px;
       }
 
-      .intro,
-      .message-box {
+      .intro {
         font-size: 16px;
       }
 
-      .hero-note {
-        font-size: 14px;
+      .day-button {
+        font-size: 15px;
       }
 
       .cat {
-        font-size: 48px;
+        font-size: 47px;
       }
     }
   </style>
@@ -407,7 +318,7 @@
   <div class="blob blob1"></div>
   <div class="blob blob2"></div>
 
-  <div class="paws-bg">
+  <div class="paw-bg">
     <span class="paw">🐾</span>
     <span class="paw">🐾</span>
     <span class="paw">🐾</span>
@@ -421,165 +332,123 @@
 
       <div class="cat" id="cat">😺</div>
 
-      <h1>ملاحظة صغيرة إلك 🐾</h1>
+      <h1>تفاصيل صغيرة من يوم عادي 🐾</h1>
 
       <p class="intro">
-        اليوم ما في مفاجأة كبيرة...
+        اليوم ما صار شي كبير...
         <br>
-        بس في شغلة صغيرة حبيت قلك ياها.
+        بس القطة قررت تجمع كم تفصيل صغير ما بدها ياه يضيع.
       </p>
 
       <div class="divider"></div>
 
-      <button
-        class="main-button"
-        onclick="openMessage()"
-      >
-        طيب شو هي؟ 👀
-      </button>
+      <div class="day-items">
 
-
-      <section id="mainMessage">
-
-        <div class="message-box">
-
-          مو لازم تكوني مبسوطة كرمال نحكي.
-
-          <br><br>
-
-          ومو لازم يكون مزاجك منيح كرمال أشوفك.
-
-          <br><br>
-
-          إذا كنتي زعلانة، معصبة، تعبانة
-          أو حتى ما إلك خُلُق تحكي...
-
-          <br><br>
-
-          <strong>
-            فيكي تكوني متل ما إنتِ وبس.
-          </strong>
-
-          <br><br>
-
-          مو كل وجود لازم يكون معه شرح،
-          ومو كل سكوت لازم نصلحه.
-
-        </div>
-
-
-        <div class="hero-note">
-
-          من الصبح للمسا وإنتِ عم تعطي من طاقتك...
-
-          <br>
-
-          فبس حبيت ذكّرك إنك عنجد
-          <strong>بطلتي</strong>،
-
-          <br>
-
-          وحتى البطل بيتعب
-          وبيحتاج يرتاح شوي 🤍
-
-        </div>
-
-
-        <div class="choices">
-
-          <div class="choice-title">
-            والقطة عندها كم جواب جاهز حسب الحالة 😼
-          </div>
-
-
-          <button
-            class="option-button"
-            onclick="answer('silent')"
-          >
-            وإذا ما إلي خلق أحكي؟ 💤
-          </button>
-
-
-          <button
-            class="option-button"
-            onclick="answer('angry')"
-          >
-            وإذا كنت معصبة؟ 😾
-          </button>
-
-
-          <button
-            class="option-button"
-            onclick="answer('badDay')"
-          >
-            وإذا كان يومي سيئ؟ 🌧️
-          </button>
-
-
-          <div id="responseBox"></div>
-
-        </div>
-
-
-        <div
-          class="little-note"
-          id="littleNote"
+        <button
+          class="day-button"
+          onclick="showMessage('chocolate')"
         >
+          🍫 قطعة Twix
+        </button>
 
-          وبيناتنا…
+        <button
+          class="day-button"
+          onclick="showMessage('walk')"
+        >
+          🚶 التمشاية
+        </button>
 
-          <br>
+        <button
+          class="day-button"
+          onclick="showMessage('night')"
+        >
+          🌙 آخر اليوم
+        </button>
 
-          يمكن بهمني أمرك
-          أكتر من ما ببيّن أحياناً 🤍
+      </div>
 
-        </div>
+      <div id="messageBox"></div>
 
-      </section>
-
+      <div class="summary" id="summary">
+        <strong>تقرير القطة لليوم:</strong>
+        <br>
+        ما صار شي كبير...
+        بس كان في شوية تفاصيل حلوة
+        بتكفي تخلي اليوم مو عادي تماماً 🐾
+      </div>
 
       <div class="footer">
-        القطة بتقول إن المزاج السيئ
-        ما بيلغي حقك بالراحة 🐾
+        القطة بتقول إن التفاصيل الصغيرة أحياناً بتضل أكتر من الأحداث الكبيرة 😼
       </div>
 
     </main>
 
   </div>
 
-
   <script>
 
-    let opened = false;
-    let optionClicks = 0;
+    let openedItems = new Set();
+
+    function showMessage(type) {
+
+      const box = document.getElementById("messageBox");
+      const summary = document.getElementById("summary");
+      const cat = document.getElementById("cat");
+
+      let text = "";
+
+      if (type === "chocolate") {
+
+        text =
+          "مو لازم الهدية تكون كبيرة… أحياناً قطعة Twix نتشاركها سوا بتكفي تقول: كنت مفكر فيكي. 🍫🤍";
+
+      }
+
+      if (type === "walk") {
+
+        text =
+          "يمكن كانت تمشاية عادية… بس أوقات أبسط وقت منقضيه سوا بيطلع أحلى جزء بالنهار. 🚶🐾";
+
+      }
+
+      if (type === "night") {
+
+        text =
+          "واليوم ما قدرنا نحكي بالليل… بس مو كل يوم لازم يخلص بحكي طويل. أحياناً بكفي إنو مرقنا نهارنا وعرفنا إنو كل واحد بخير. 🌙🤍";
+
+      }
+
+      box.classList.remove("show");
+
+      setTimeout(() => {
+
+        box.textContent = text;
+        box.classList.add("show");
+
+      }, 150);
 
 
-    function openMessage() {
+      openedItems.add(type);
 
-      const message =
-        document.getElementById("mainMessage");
-
-      const cat =
-        document.getElementById("cat");
+      cat.textContent = "😸";
 
 
-      message.classList.add("show");
+      if (openedItems.size === 3) {
+
+        setTimeout(() => {
+
+          summary.classList.add("show");
+
+        }, 450);
 
 
-      if (!opened) {
-
-        opened = true;
-
-        cat.textContent = "😸";
-
-
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < 9; i++) {
 
           setTimeout(() => {
 
             createFloat();
 
-          }, i * 160);
+          }, i * 150);
 
         }
 
@@ -588,83 +457,17 @@
     }
 
 
-    function answer(type) {
-
-      const box =
-        document.getElementById("responseBox");
-
-      const note =
-        document.getElementById("littleNote");
-
-
-      let text = "";
-
-
-      if (type === "silent") {
-
-        text =
-          "ولا مشكلة. منمشي شوي، منقعد شوي، أو منضل ساكتين. مو لازم يكون في حكي طول الوقت 🐾";
-
-      }
-
-
-      if (type === "angry") {
-
-        text =
-          "مسموح 😼 مو مطلوب منك تكوني لطيفة ومبتسمة طول الوقت. حتى القطة بتعصب أحياناً.";
-
-      }
-
-
-      if (type === "badDay") {
-
-        text =
-          "مو كل يوم لازم ينربح. في أيام بيكفي إننا نمرقها بهدوء ونوصل لآخرها 🤍";
-
-      }
-
-
-      box.classList.remove("show");
-
-
-      setTimeout(() => {
-
-        box.textContent = text;
-
-        box.classList.add("show");
-
-      }, 150);
-
-
-      optionClicks++;
-
-
-      if (optionClicks >= 2) {
-
-        setTimeout(() => {
-
-          note.classList.add("show");
-
-        }, 450);
-
-      }
-
-    }
-
-
     function createFloat() {
 
-      const item =
-        document.createElement("div");
+      const item = document.createElement("div");
 
-
-      item.className =
-        "float-item";
+      item.className = "float-item";
 
 
       const symbols = [
         "🐾",
         "♡",
+        "🍫",
         "🐾",
         "♡"
       ];
