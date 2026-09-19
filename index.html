@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>اليوم أخف شوي 🐾</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>اليوم قرّبنا شوي 🐾</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -16,13 +18,13 @@
     body {
       min-height: 100vh;
       font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-      color: #52484b;
+      color: #55474d;
       overflow-x: hidden;
 
       background:
-        radial-gradient(circle at 18% 15%, rgba(255,255,255,.95), transparent 28%),
-        radial-gradient(circle at 85% 85%, rgba(232,215,202,.50), transparent 32%),
-        linear-gradient(135deg, #fffaf6, #f5eee9);
+        radial-gradient(circle at 15% 15%, rgba(255,255,255,.95), transparent 28%),
+        radial-gradient(circle at 85% 82%, rgba(242,214,205,.48), transparent 32%),
+        linear-gradient(135deg, #fffaf6, #f7eeea);
 
       position: relative;
     }
@@ -31,7 +33,7 @@
       position: fixed;
       border-radius: 50%;
       filter: blur(8px);
-      opacity: .32;
+      opacity: .35;
       z-index: 0;
       animation: blobMove 12s ease-in-out infinite alternate;
     }
@@ -39,9 +41,9 @@
     .blob1 {
       width: 260px;
       height: 260px;
-      top: -90px;
+      top: -80px;
       right: -70px;
-      background: #ecd5ce;
+      background: #efd6d0;
     }
 
     .blob2 {
@@ -49,17 +51,17 @@
       height: 220px;
       bottom: -70px;
       left: -60px;
-      background: #e9dfce;
+      background: #eadfcf;
       animation-delay: 2s;
     }
 
     @keyframes blobMove {
       from {
-        transform: translate(0, 0);
+        transform: translate(0,0);
       }
 
       to {
-        transform: translate(18px, 20px);
+        transform: translate(20px,20px);
       }
     }
 
@@ -68,14 +70,13 @@
       inset: 0;
       pointer-events: none;
       z-index: 0;
-      overflow: hidden;
     }
 
     .paw {
       position: absolute;
       font-size: 22px;
       opacity: .055;
-      animation: pawFloat 11s ease-in-out infinite alternate;
+      animation: pawFloat 10s ease-in-out infinite alternate;
     }
 
     .paw:nth-child(1) {
@@ -85,13 +86,13 @@
 
     .paw:nth-child(2) {
       top: 28%;
-      right: 9%;
+      right: 8%;
       animation-delay: 2s;
     }
 
     .paw:nth-child(3) {
-      top: 52%;
-      left: 8%;
+      top: 50%;
+      left: 7%;
       animation-delay: 4s;
     }
 
@@ -103,7 +104,7 @@
 
     .paw:nth-child(5) {
       top: 88%;
-      left: 20%;
+      left: 18%;
       animation-delay: 3s;
     }
 
@@ -119,19 +120,23 @@
 
     .page {
       min-height: 100vh;
+      padding: 24px;
+
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 24px;
+
       position: relative;
       z-index: 2;
     }
 
     .card {
-      width: min(92vw, 660px);
+      width: min(92vw, 680px);
+
       padding: 42px 30px;
 
       background: rgba(255,255,255,.74);
+
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
 
@@ -139,15 +144,15 @@
       border-radius: 30px;
 
       box-shadow:
-        0 25px 70px rgba(75,55,60,.10),
+        0 25px 70px rgba(80,55,60,.10),
         inset 0 1px rgba(255,255,255,.9);
 
       text-align: center;
 
-      animation: cardAppear .9s ease;
+      animation: appear .9s ease;
     }
 
-    @keyframes cardAppear {
+    @keyframes appear {
       from {
         opacity: 0;
         transform: translateY(18px) scale(.98);
@@ -159,208 +164,233 @@
       }
     }
 
-    .cat-wrap {
-      margin-bottom: 12px;
-    }
-
     .cat {
       display: inline-block;
+
       font-size: 56px;
-      animation: catRest 3s ease-in-out infinite alternate;
+
+      margin-bottom: 10px;
+
+      animation: catMove 2.8s ease-in-out infinite alternate;
     }
 
-    @keyframes catRest {
+    @keyframes catMove {
       from {
-        transform: translateY(0) rotate(-2deg);
+        transform: translateY(0) rotate(-3deg);
       }
 
       to {
-        transform: translateY(-4px) rotate(2deg);
+        transform: translateY(-5px) rotate(3deg);
       }
     }
 
     h1 {
-      font-size: clamp(28px, 6vw, 42px);
-      color: #66575b;
+      font-size: clamp(29px, 6vw, 43px);
+      color: #665158;
       margin-bottom: 14px;
     }
 
     .intro {
-      max-width: 510px;
+      max-width: 520px;
+
       margin: 0 auto;
+
       font-size: 17px;
       line-height: 2;
-      color: #7a6b6f;
+
+      color: #7a696e;
     }
 
     .divider {
       width: 52px;
       height: 3px;
-      border-radius: 10px;
-      background: #d4aaa3;
+
       margin: 24px auto;
+
+      background: #d7a7a1;
+
+      border-radius: 10px;
     }
 
-    button {
+    .question {
+      font-size: 14px;
+      color: #9b858b;
+      margin-bottom: 13px;
+    }
+
+    .memory-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .memory-button {
+      width: 100%;
+
+      padding: 14px 18px;
+
+      border-radius: 19px;
+      border: 1px solid rgba(211,173,165,.42);
+
+      background: rgba(255,255,255,.72);
+
+      color: #745f65;
+
       font-family: inherit;
+      font-size: 15px;
+
       cursor: pointer;
-      border: none;
-    }
-
-    .main-button {
-      padding: 13px 26px;
-      border-radius: 999px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #d8aaa2,
-          #c9958d
-        );
-
-      color: white;
-      font-size: 16px;
-
-      box-shadow:
-        0 10px 23px
-        rgba(185,130,120,.20);
 
       transition:
         transform .25s ease,
-        box-shadow .25s ease;
+        background .25s ease,
+        box-shadow .25s ease,
+        border .25s ease;
     }
 
-    .main-button:hover {
+    .memory-button:hover {
       transform: translateY(-2px);
 
+      background: #fffaf8;
+
       box-shadow:
-        0 13px 28px
-        rgba(185,130,120,.28);
+        0 8px 20px rgba(130,90,95,.07);
     }
 
-    .main-button:active {
-      transform: scale(.97);
+    .memory-button:active {
+      transform: scale(.98);
     }
 
-    #content {
+    .memory-button.opened {
+      background: rgba(249,239,236,.82);
+      border-color: rgba(192,143,137,.5);
+    }
+
+    #messageBox {
       max-height: 0;
       opacity: 0;
       overflow: hidden;
+
       margin-top: 0;
+      padding: 0 20px;
+
+      border-radius: 21px;
+
+      background: rgba(250,244,241,.82);
+
+      color: #67565c;
+
+      font-size: 15px;
+      line-height: 2;
 
       transition:
-        max-height 1s ease,
-        opacity .8s ease,
-        margin .8s ease;
+        max-height .65s ease,
+        opacity .65s ease,
+        margin .65s ease,
+        padding .65s ease;
     }
 
-    #content.show {
-      max-height: 1800px;
+    #messageBox.show {
+      max-height: 320px;
+
       opacity: 1;
-      margin-top: 28px;
+
+      margin-top: 18px;
+      padding: 19px 20px;
     }
 
-    .box {
-      padding: 23px 22px;
+    #messageBox strong {
+      color: #b67673;
+    }
+
+    #finalReport {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+
+      margin-top: 0;
+      padding: 0 20px;
+
       border-radius: 22px;
 
-      background: rgba(255,255,255,.62);
-
-      border:
-        1px solid
-        rgba(210,180,171,.34);
-
-      font-size: 16px;
-      line-height: 2;
-
-      color: #65585c;
-    }
-
-    .box strong {
-      color: #b67e78;
-    }
-
-    .soft-note {
-      margin-top: 18px;
-      padding: 18px 20px;
-
-      border-radius: 20px;
-
       background:
-        rgba(250,245,241,.76);
+        linear-gradient(
+          145deg,
+          rgba(255,249,247,.90),
+          rgba(247,237,234,.90)
+        );
 
       border:
-        1px solid
-        rgba(210,180,171,.28);
+        1px solid rgba(205,163,156,.32);
+
+      color: #6f5c62;
 
       font-size: 15px;
       line-height: 2;
 
-      color: #756569;
+      transition:
+        max-height .9s ease,
+        opacity .9s ease,
+        margin .9s ease,
+        padding .9s ease;
     }
 
-    .talk-note {
-      margin-top: 18px;
-      padding: 18px 20px;
+    #finalReport.show {
+      max-height: 650px;
 
-      border-radius: 20px;
+      opacity: 1;
 
-      background:
-        rgba(247,239,235,.82);
-
-      border:
-        1px solid
-        rgba(204,167,158,.30);
-
-      font-size: 15px;
-      line-height: 2;
-
-      color: #715d62;
-    }
-
-    .talk-note strong {
-      color: #b77a74;
-    }
-
-    .cat-section {
       margin-top: 26px;
-      padding-top: 22px;
-
-      border-top:
-        1px solid
-        rgba(120,95,100,.10);
+      padding: 22px 21px;
     }
 
-    .cat-title {
-      font-size: 14px;
-      color: #9b878b;
+    .report-title {
+      font-size: 16px;
+      font-weight: 700;
+
+      color: #b47470;
+
       margin-bottom: 12px;
     }
 
-    .small-button {
-      padding: 11px 20px;
+    .report-important {
+      margin-top: 17px;
+
+      padding-top: 17px;
+
+      border-top:
+        1px solid rgba(120,90,95,.10);
+    }
+
+    .secret-area {
+      margin-top: 20px;
+    }
+
+    .secret-button {
+      padding: 10px 19px;
 
       border-radius: 999px;
 
+      border:
+        1px solid rgba(205,160,154,.48);
+
       background: transparent;
 
-      border:
-        1px solid
-        rgba(203,161,154,.55);
+      color: #99716f;
 
-      color: #9b6e6a;
+      font-family: inherit;
+      font-size: 13px;
 
-      font-size: 14px;
+      cursor: pointer;
 
       transition: .25s ease;
     }
 
-    .small-button:hover {
-      background: #fff9f6;
+    .secret-button:hover {
+      background: #fff8f6;
       transform: translateY(-2px);
     }
 
-    #catMessage {
+    #secretNote {
       max-height: 0;
       opacity: 0;
       overflow: hidden;
@@ -371,51 +401,54 @@
       border-radius: 18px;
 
       background:
-        rgba(255,248,245,.72);
+        rgba(255,247,244,.75);
 
-      color: #6e5e62;
+      color: #69575c;
 
       font-size: 14px;
-      line-height: 1.9;
+      line-height: 2;
 
       transition:
-        max-height .6s ease,
-        opacity .6s ease,
-        margin .6s ease,
-        padding .6s ease;
+        max-height .7s ease,
+        opacity .7s ease,
+        margin .7s ease,
+        padding .7s ease;
     }
 
-    #catMessage.show {
-      max-height: 190px;
+    #secretNote.show {
+      max-height: 280px;
+
       opacity: 1;
-      margin-top: 16px;
-      padding: 15px 16px;
+
+      margin-top: 15px;
+      padding: 16px;
     }
 
     .footer {
-      margin-top: 27px;
+      margin-top: 26px;
+
+      color: #ad999e;
+
       font-size: 12px;
       line-height: 1.8;
-      color: #ae9b9f;
     }
 
     .float-item {
       position: fixed;
       bottom: -35px;
+
       z-index: 20;
+
       pointer-events: none;
+
       opacity: 0;
 
-      animation:
-        rise linear forwards;
+      animation: rise linear forwards;
     }
 
     @keyframes rise {
       0% {
-        transform:
-          translateY(0)
-          rotate(0deg);
-
+        transform: translateY(0) rotate(0deg);
         opacity: 0;
       }
 
@@ -424,33 +457,44 @@
       }
 
       100% {
-        transform:
-          translateY(-110vh)
-          rotate(20deg);
-
+        transform: translateY(-110vh) rotate(20deg);
         opacity: 0;
       }
     }
 
     @media (max-width: 520px) {
+
       .card {
         padding: 36px 21px;
         border-radius: 26px;
       }
 
-      .intro,
-      .box {
+      .intro {
         font-size: 16px;
+      }
+
+      .memory-button {
+        font-size: 15px;
       }
 
       .cat {
         font-size: 50px;
       }
+
     }
+
   </style>
-  <script data-goatcounter="https://hiba-morning.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+
+
+  <!-- GoatCounter -->
+  <script
+    data-goatcounter="https://hiba-morning.goatcounter.com/count"
+    async
+    src="//gc.zgo.at/count.js">
+  </script>
+
 </head>
+
 
 <body>
 
@@ -458,254 +502,361 @@
   <div class="blob blob2"></div>
 
   <div class="paw-bg">
+
     <span class="paw">🐾</span>
     <span class="paw">🐾</span>
     <span class="paw">🐾</span>
     <span class="paw">🐾</span>
     <span class="paw">🐾</span>
+
   </div>
+
 
   <div class="page">
 
     <main class="card">
 
-      <div class="cat-wrap">
-        <div class="cat" id="cat">😽</div>
+
+      <div class="cat" id="cat">
+        😺
       </div>
 
+
       <h1>
-        اليوم كان تقيل شوي… 🐾
+        اليوم قرّبنا شوي… 🐾
       </h1>
 
+
       <p class="intro">
-        فالقطة قررت إنو هالمكان
-        اليوم ما بده أسئلة كتير…
+
+        القطة اليوم عندها تقرير أطول شوي…
+
         <br>
-        بده يكون أخف شوي وبس.
+
+        لأن الظاهر إنو هاد اليوم
+        ما كان عادي تماماً 😼
+
       </p>
+
 
       <div class="divider"></div>
 
-      <button
-        class="main-button"
-        onclick="openPage()"
-      >
-        شو بدها تقول القطة؟ 👀
-      </button>
 
-      <section id="content">
+      <div class="question">
 
-        <!-- رسالة الأمان الأساسية -->
-        <div class="box">
+        القطة جمعت أربع شغلات من اليوم…
+        شو بدك تفتحي أول شي؟ 👀
 
-          ما بدي منك تكوني رايقة
-          كرمال تشوفيني،
+      </div>
 
-          <br><br>
 
-          ولا مبسوطة
-          كرمال نحكي.
+      <div class="memory-grid">
 
-          <br><br>
 
-          إذا يومك سيئ،
-          فيكي تكوني سيئة المزاج معي
+        <button
+          id="cafeButton"
+          class="memory-button"
+          onclick="showMemory('cafe', this)"
+        >
 
-          <br>
+          ☕ ليش الكافيه كان أحلى من السينما؟
 
-          <strong>
-            بدون ما تخافي إني آخدها عليك.
-          </strong>
+        </button>
 
-          <br><br>
 
-          وإذا ما إلك خلق تحكي
-          أو تشرحي شو فيكي...
+        <button
+          id="detailsButton"
+          class="memory-button"
+          onclick="showMemory('details', this)"
+        >
 
-          <br><br>
+          🎲 تفاصيل صغيرة من اليوم
 
-          عادي.
+        </button>
 
-          <br>
 
-          فيكي تكوني متل ما إنتِ وبس. 🐾
+        <button
+          id="safetyButton"
+          class="memory-button"
+          onclick="showMemory('safety', this)"
+        >
 
-        </div>
+          🤍 أحلى شي سمعته القطة اليوم
 
-        <!-- تفهّم إنه ما حكت -->
-        <div class="soft-note">
+        </button>
 
-          وبالنسبة لليوم...
 
-          <br>
+        <button
+          id="nightButton"
+          class="memory-button"
+          onclick="showMemory('night', this)"
+        >
 
-          ما زعلت لأنك
-          ما قدرتي تحكي.
+          🌙 وآخر الليل؟
 
-          <br><br>
+        </button>
 
-          يمكن كنت أتمنى أعرف
-          شو عم يضايقك،
 
-          <br>
+      </div>
 
-          بس بعرف كمان
-          إن مو كل شي بينحكى
-          بنفس اللحظة.
 
-          <br><br>
+      <div id="messageBox"></div>
 
-          الأهم عندي
-          إنك تكوني مرتاحة.
+
+      <section id="finalReport">
+
+
+        <div class="report-title">
+
+          تقرير القطة لليوم 🐾
 
         </div>
 
-        <!-- الشغلة اللي ضلت ببالك -->
-        <div class="talk-note">
 
-          وضلّت شغلة صغيرة
-          ببالي من اليوم...
+        يمكن أحلى شي باليوم
+        إنو كل شي كان طبيعي وبسيط…
+
+        <br><br>
+
+        حكينا، ضحكنا،
+        وأخدنا راحتنا أكتر مع بعض.
+
+        <br><br>
+
+        ويمكن هاد بالضبط
+        اللي خلّى اليوم مميز  🤍
+
+
+        <div class="report-important">
+
+          وفي ناس بتقرب من بعضها
+          بالأحداث الكبيرة…
 
           <br><br>
 
-          بخليها لوقت
-          نكون رايقين
-          ونحكي فيها سوا،
-
-          <br>
-
-          لأن الأهم عندي
-
-          <strong>
-            نفهم بعض صح 🤍
-          </strong>
+          وإنتو شكلكن عم تقربوا
+          بالحكي والتفاصيل الصغيرة 😼🐾
 
         </div>
 
-        <!-- رسالة القطة الأخيرة -->
-        <div class="cat-section">
 
-          <div class="cat-title">
-            والقطة عندها آخر ملاحظة قبل ما تسكري الصفحة 😼
-          </div>
+        <div class="secret-area">
 
           <button
-            class="small-button"
-            onclick="showCatMessage()"
+            class="secret-button"
+            onclick="showSecret()"
           >
-            شو كمان؟ 🐾
+
+            والقطة مخبّاية ملاحظة أخيرة 🤫🐾
+
           </button>
 
-          <div id="catMessage">
 
-            بكرا يوم جديد…
+          <div id="secretNote">
 
-            <br>
-
-            مو لازم يكون مثالي،
-
-            <br>
-
-            بس بتمنى يكون أخف عليكي من اليوم 🤍
+            وبيناتنا…
 
             <br><br>
 
-            والقطة بتقول:
+            إذا قدرتِ تكوني طفلة،
+            جدية،
+            زعلانة،
+            مبسوطة،
+            أو حتى ساكتة…
+
+            <br><br>
+
+            بدون ما تضطري تتصنعي،
 
             <br>
 
-            ممنوع تحملي كل شي لحالك 😼🐾
+            ويمكن تحسي إن اللي قدامك
+            رح يفهمك صح…
+
+            <br><br>
+
+            <strong>
+              يمكن هاد لحاله
+              شي حلو يستاهل نحافظ عليه 🤍
+            </strong>
 
           </div>
 
         </div>
 
+
       </section>
+
 
       <div class="footer">
 
-        الموقع اليوم قرر يكون هادي…
-
-        <br>
-
-        لأنه واضح إن صاحبته
-        كانت محتاجة هدوء أكتر من الكلام 🐾
+        تحديث اليوم تمت مراجعته
+        والموافقة عليه من قسم القطط 😼🐾
 
       </div>
+
 
     </main>
 
   </div>
 
+
   <script>
 
-    let opened = false;
 
-    function openPage() {
+    const openedMemories = new Set();
 
-      const content =
-        document.getElementById("content");
+    let finalShown = false;
+
+
+    function showMemory(type, button) {
+
+
+      const box =
+        document.getElementById("messageBox");
 
       const cat =
         document.getElementById("cat");
 
-      content.classList.add("show");
 
-      if (!opened) {
+      let text = "";
 
-        opened = true;
 
-        cat.textContent = "😺";
+      if (type === "cafe") {
 
-        for (let i = 0; i < 7; i++) {
+        text =
+          "يمكن الخطة كانت سينما… بس أوقات أحلى خطة هي اللي منغيّرها كرمال نقعد ونحكي أكتر. واليوم طلع إن الحكي كان أحلى من الفيلم. ☕🤍";
+
+      }
+
+
+      if (type === "details") {
+
+        text =
+          "أكل، ضحك، طاولة زهر، وحكي ما خلص… يمكن ما في حدث ضخم هون، بس كان في شي أحلى: راحة وبساطة بدون تصنّع. 🎲🐾";
+
+      }
+
+
+      if (type === "safety") {
+
+        text =
+          "«أنا بارتاح معك… وما بتصنّع، وبحس بالأمان إنك تفهمني صح.» 🤍\n\nالقطة سجلت هاي الجملة… ويبدو إنها ما رح تنساها بسهولة 🐾";
+
+      }
+
+
+      if (type === "night") {
+
+        text =
+          "يمكن اليوم لأول مرة صار الحكي بينا أدفى شوي… مو لأن صار شي ضخم، بس لأن كل واحد قدر يحكي عن حاله أكتر شوي، بدون ما نستعجل شي. 🌙🤍";
+
+      }
+
+
+      box.classList.remove("show");
+
+
+      setTimeout(() => {
+
+        box.textContent = text;
+
+        box.classList.add("show");
+
+      }, 150);
+
+
+      openedMemories.add(type);
+
+
+      button.classList.add("opened");
+
+
+      cat.textContent = "😸";
+
+
+      if (
+        openedMemories.size === 4
+        &&
+        !finalShown
+      ) {
+
+        finalShown = true;
+
+
+        setTimeout(() => {
+
+          document
+            .getElementById("finalReport")
+            .classList.add("show");
+
+        }, 650);
+
+
+        for (let i = 0; i < 11; i++) {
 
           setTimeout(() => {
 
             createFloat();
 
-          }, i * 170);
+          }, i * 130);
 
         }
+
       }
+
     }
 
-    function showCatMessage() {
 
-      const message =
-        document.getElementById("catMessage");
+    function showSecret() {
 
-      const cat =
-        document.getElementById("cat");
 
-      message.classList.add("show");
+      const secret =
+        document.getElementById("secretNote");
 
-      cat.textContent = "😸";
 
-      for (let i = 0; i < 5; i++) {
+      secret.classList.add("show");
+
+
+      document.getElementById("cat")
+        .textContent = "😼";
+
+
+      for (let i = 0; i < 7; i++) {
 
         setTimeout(() => {
 
           createFloat();
 
-        }, i * 170);
+        }, i * 140);
 
       }
+
     }
 
+
     function createFloat() {
+
 
       const item =
         document.createElement("div");
 
+
       item.className =
         "float-item";
 
+
       const symbols = [
+
         "🐾",
         "♡",
         "🐾",
-        "♡"
+        "♡",
+        "☕",
+        "🐾"
+
       ];
+
 
       item.textContent =
         symbols[
@@ -714,28 +865,38 @@
           )
         ];
 
+
       item.style.left =
         Math.random() * 100 + "vw";
+
 
       item.style.fontSize =
         (15 + Math.random() * 15) + "px";
 
+
       item.style.animationDuration =
         (5 + Math.random() * 4) + "s";
 
+
       item.style.color =
-        "rgba(190, 140, 135, .28)";
+        "rgba(190,135,130,.30)";
+
 
       document.body.appendChild(item);
+
 
       setTimeout(() => {
 
         item.remove();
 
       }, 9000);
+
     }
+
 
   </script>
 
+
 </body>
+
 </html>
