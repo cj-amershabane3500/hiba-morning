@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>اليوم قرّبنا شوي 🐾</title>
+  <title>صباحك راحة يا هبة 🐾</title>
 
   <style>
 
@@ -22,12 +22,14 @@
       overflow-x: hidden;
 
       background:
-        radial-gradient(circle at 15% 15%, rgba(255,255,255,.95), transparent 28%),
+        radial-gradient(circle at 15% 15%, rgba(255,255,255,.96), transparent 28%),
         radial-gradient(circle at 85% 82%, rgba(242,214,205,.48), transparent 32%),
         linear-gradient(135deg, #fffaf6, #f7eeea);
 
       position: relative;
     }
+
+    /* الخلفية */
 
     .blob {
       position: fixed;
@@ -64,6 +66,8 @@
         transform: translate(20px,20px);
       }
     }
+
+    /* كفوف الخلفية */
 
     .paw-bg {
       position: fixed;
@@ -118,6 +122,8 @@
       }
     }
 
+    /* الصفحة */
+
     .page {
       min-height: 100vh;
       padding: 24px;
@@ -130,12 +136,13 @@
       z-index: 2;
     }
 
+    /* الكرت */
+
     .card {
       width: min(92vw, 680px);
-
       padding: 42px 30px;
 
-      background: rgba(255,255,255,.74);
+      background: rgba(255,255,255,.76);
 
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
@@ -164,11 +171,11 @@
       }
     }
 
+    /* القطة */
+
     .cat {
       display: inline-block;
-
-      font-size: 56px;
-
+      font-size: 58px;
       margin-bottom: 10px;
 
       animation: catMove 2.8s ease-in-out infinite alternate;
@@ -191,8 +198,7 @@
     }
 
     .intro {
-      max-width: 520px;
-
+      max-width: 540px;
       margin: 0 auto;
 
       font-size: 17px;
@@ -208,7 +214,6 @@
       margin: 24px auto;
 
       background: #d7a7a1;
-
       border-radius: 10px;
     }
 
@@ -218,6 +223,8 @@
       margin-bottom: 13px;
     }
 
+    /* الأزرار */
+
     .memory-grid {
       display: grid;
       gap: 12px;
@@ -225,7 +232,6 @@
 
     .memory-button {
       width: 100%;
-
       padding: 14px 18px;
 
       border-radius: 19px;
@@ -249,7 +255,6 @@
 
     .memory-button:hover {
       transform: translateY(-2px);
-
       background: #fffaf8;
 
       box-shadow:
@@ -264,6 +269,8 @@
       background: rgba(249,239,236,.82);
       border-color: rgba(192,143,137,.5);
     }
+
+    /* الرسالة */
 
     #messageBox {
       max-height: 0;
@@ -290,17 +297,14 @@
     }
 
     #messageBox.show {
-      max-height: 320px;
-
+      max-height: 360px;
       opacity: 1;
 
       margin-top: 18px;
       padding: 19px 20px;
     }
 
-    #messageBox strong {
-      color: #b67673;
-    }
+    /* التقرير النهائي */
 
     #finalReport {
       max-height: 0;
@@ -315,8 +319,8 @@
       background:
         linear-gradient(
           145deg,
-          rgba(255,249,247,.90),
-          rgba(247,237,234,.90)
+          rgba(255,249,247,.92),
+          rgba(247,237,234,.92)
         );
 
       border:
@@ -335,8 +339,7 @@
     }
 
     #finalReport.show {
-      max-height: 650px;
-
+      max-height: 760px;
       opacity: 1;
 
       margin-top: 26px;
@@ -352,14 +355,15 @@
       margin-bottom: 12px;
     }
 
-    .report-important {
+    .important {
       margin-top: 17px;
-
       padding-top: 17px;
 
       border-top:
         1px solid rgba(120,90,95,.10);
     }
+
+    /* السر */
 
     .secret-area {
       margin-top: 20px;
@@ -400,8 +404,7 @@
 
       border-radius: 18px;
 
-      background:
-        rgba(255,247,244,.75);
+      background: rgba(255,247,244,.78);
 
       color: #69575c;
 
@@ -416,8 +419,7 @@
     }
 
     #secretNote.show {
-      max-height: 280px;
-
+      max-height: 350px;
       opacity: 1;
 
       margin-top: 15px;
@@ -432,6 +434,8 @@
       font-size: 12px;
       line-height: 1.8;
     }
+
+    /* عناصر طائرة */
 
     .float-item {
       position: fixed;
@@ -485,7 +489,6 @@
 
   </style>
 
-
   <!-- GoatCounter -->
   <script
     data-goatcounter="https://hiba-morning.goatcounter.com/count"
@@ -495,150 +498,139 @@
 
 </head>
 
-
 <body>
 
   <div class="blob blob1"></div>
   <div class="blob blob2"></div>
 
   <div class="paw-bg">
-
     <span class="paw">🐾</span>
     <span class="paw">🐾</span>
     <span class="paw">🐾</span>
     <span class="paw">🐾</span>
     <span class="paw">🐾</span>
-
   </div>
-
 
   <div class="page">
 
     <main class="card">
 
-
       <div class="cat" id="cat">
-        😺
+        😽
       </div>
 
-
       <h1>
-        اليوم قرّبنا شوي… 🐾
+        صباحك راحة يا هبة 🤍
       </h1>
-
 
       <p class="intro">
 
-        القطة اليوم عندها تقرير أطول شوي…
+        القطة كانت عم تراجع أحداث مبارح…
 
         <br>
 
-        لأن الظاهر إنو هاد اليوم
-        ما كان عادي تماماً 😼
+        وبالرغم إن الحكي ما كان سهل كله،
+        طلعت معها ملاحظة حلوة كتير 🐾
 
       </p>
 
-
       <div class="divider"></div>
 
-
       <div class="question">
-
-        القطة جمعت أربع شغلات من اليوم…
-        شو بدك تفتحي أول شي؟ 👀
-
+        افتحي تقرير القطة شوي شوي 👀
       </div>
-
 
       <div class="memory-grid">
 
-
         <button
-          id="cafeButton"
           class="memory-button"
-          onclick="showMemory('cafe', this)"
+          onclick="showMemory('honesty', this)"
         >
-
-          ☕ ليش الكافيه كان أحلى من السينما؟
-
+          🤍 شو أكتر شي ريّحها؟
         </button>
 
-
         <button
-          id="detailsButton"
           class="memory-button"
-          onclick="showMemory('details', this)"
+          onclick="showMemory('understanding', this)"
         >
-
-          🎲 تفاصيل صغيرة من اليوم
-
+          🐾 شو فهمت من مبارح؟
         </button>
 
-
         <button
-          id="safetyButton"
           class="memory-button"
-          onclick="showMemory('safety', this)"
+          onclick="showMemory('after', this)"
         >
-
-          🤍 أحلى شي سمعته القطة اليوم
-
+          😼 وأحلى شي بعد الحكي؟
         </button>
 
-
         <button
-          id="nightButton"
           class="memory-button"
-          onclick="showMemory('night', this)"
+          onclick="showMemory('morning', this)"
         >
-
-          🌙 وآخر الليل؟
-
+          ☀️ ورسالة الصبح؟
         </button>
-
 
       </div>
 
-
       <div id="messageBox"></div>
-
 
       <section id="finalReport">
 
-
         <div class="report-title">
-
-          تقرير القطة لليوم 🐾
-
+          تقرير القطة النهائي 🐾
         </div>
 
+        مبارح فهمتك أكتر…
 
-        يمكن أحلى شي باليوم
-        إنو كل شي كان طبيعي وبسيط…
+        <br>
 
-        <br><br>
-
-        حكينا، ضحكنا،
-        وأخدنا راحتنا أكتر مع بعض.
+        وارتحتلك أكتر.
 
         <br><br>
 
-        ويمكن هاد بالضبط
-        اللي خلّى اليوم مميز  🤍
+        مو لأن كل حكي بين شخصين
+        لازم يكون سهل،
 
+        <br>
 
-        <div class="report-important">
+        بس لأن الحلو إنو فينا نحكي
+        حتى لما الموضوع يكون حساس،
 
-          وفي ناس بتقرب من بعضها
-          بالأحداث الكبيرة…
+        <br>
+
+        ونسمع بعض عنجد.
+
+        <br><br>
+
+        وبصراحة…
+
+        <strong>
+          من أكتر الشغلات الحلوة فينا
+          إنو الزعل ما بيخلينا نهد كل شي.
+        </strong>
+
+        <br><br>
+
+        منقدر نرجع نفهم بعض،
+        ونمزح،
+        ونضحك،
+        ونكمل طبيعي 🤍
+
+        <div class="important">
+
+          ويمكن مبارح آخر المكالمة
+          كانت أحلى دليل 😂
 
           <br><br>
 
-          وإنتو شكلكن عم تقربوا
-          بالحكي والتفاصيل الصغيرة 😼🐾
+          من حكي جدي…
+
+          <br>
+
+          لمزح وضحك كأن القطة
+          كانت قاعدة معنا عالمكالمة 😼🐾
 
         </div>
-
 
         <div class="secret-area">
 
@@ -646,71 +638,63 @@
             class="secret-button"
             onclick="showSecret()"
           >
-
-            والقطة مخبّاية ملاحظة أخيرة 🤫🐾
-
+            والقطة مخبّاية سر صغير 🤫🐾
           </button>
-
 
           <div id="secretNote">
 
-            وبيناتنا…
+            ملاحظة سرية جداً:
 
             <br><br>
 
-            إذا قدرتِ تكوني طفلة،
-            جدية،
-            زعلانة،
-            مبسوطة،
-            أو حتى ساكتة…
+            موضوع بنتنا المستقبلية
+            والشوكلا لسا ما انلغى 😂🍫
 
             <br><br>
 
-            بدون ما تضطري تتصنعي،
+            الخطة حسب آخر تحديث:
 
             <br>
 
-            وتحسي إن اللي قدامك
-            رح يفهمك صح…
+            هبة والقطة عالتخت 😼
+
+            <br>
+
+            وعامر والبنت
+            عم ياكلوا الشوكلا لحالهم 😂
 
             <br><br>
 
             <strong>
-              يمكن هاد لحاله
-              شي حلو يستاهل نحافظ عليه 🤍
+              ملاحظة من القطة:
+              الضرب ممنوع قبل الفطور 😂🤍
             </strong>
 
           </div>
 
         </div>
 
-
       </section>
-
 
       <div class="footer">
 
-        تحديث اليوم تمت مراجعته
-        والموافقة عليه من قسم القطط 😼🐾
+        القطة بتتمنالك نهار أخف،
+        أهدى،
+        وأحلى من مبارح 🐾🤍
 
       </div>
-
 
     </main>
 
   </div>
 
-
   <script>
-
 
     const openedMemories = new Set();
 
     let finalShown = false;
 
-
     function showMemory(type, button) {
-
 
       const box =
         document.getElementById("messageBox");
@@ -718,62 +702,50 @@
       const cat =
         document.getElementById("cat");
 
-
       let text = "";
 
-
-      if (type === "cafe") {
+      if (type === "honesty") {
 
         text =
-          "يمكن الخطة كانت سينما… بس أوقات أحلى خطة هي اللي منغيّرها كرمال نقعد ونحكي أكتر. واليوم طلع إن الحكي كان أحلى من الفيلم. ☕🤍";
+          "إنك حكيتِ بصراحة حتى لما الحكي ما كان سهل. بالنسبة للقطة هاي مو شغلة صغيرة… لأن الصراحة اللي ما فيها خوف أحلى بكتير من حكي حلو بس مو حقيقي. 🤍";
 
       }
 
-
-      if (type === "details") {
+      if (type === "understanding") {
 
         text =
-          "أكل، ضحك، طاولة زهر، وحكي ما خلص… يمكن ما في حدث ضخم هون، بس كان في شي أحلى: راحة وبساطة بدون تصنّع. 🎲🐾";
+          "إنو أحياناً الواحد بيكون شايف جزء صغير من الصورة… وبس يسمع اللي قدامه عنجد، بيفهم أشياء ما كان شايفها. مبارح حسيت إني فهمتك أكتر، وهاد الشي ريّحني كتير. 🐾";
 
       }
 
-
-      if (type === "safety") {
+      if (type === "after") {
 
         text =
-          "«أنا برتاح معك… وما بتصنّع، وبحس بالأمان إنك تفهمني صح.» 🤍\n\nالقطة سجلت هاي الجملة… ويبدو إنها ما رح تنساها بسهولة 🐾";
+          "إنو بعد كل الحكي قدرنا نرجع نمزح ونضحك ونحكي براحة. يمكن هاي من أكتر الشغلات اللي بحبها فينا… إنو الخلاف ما بيصير نهاية الدنيا 😼🤍";
 
       }
 
-
-      if (type === "night") {
+      if (type === "morning") {
 
         text =
-          "يمكن اليوم لأول مرة صار الحكي بينا أدفى شوي… مو لأن صار شي ضخم، بس لأن كل واحد قدر يحكي عن حاله أكتر شوي، بدون ما نستعجل شي. 🌙🤍";
+          "صباح الخير يا حلوة 🤍 بس حبيت أول شي يوصلك اليوم يكون إنو مبارح بالنهاية نمت وأنا مرتاح ومبسوط… وقلت بيني وبين حالي: عنجد بحب وجود هالبنت بحياتي. ☀️🐾";
 
       }
-
 
       box.classList.remove("show");
-
 
       setTimeout(() => {
 
         box.textContent = text;
-
         box.classList.add("show");
 
       }, 150);
 
-
       openedMemories.add(type);
-
 
       button.classList.add("opened");
 
-
       cat.textContent = "😸";
-
 
       if (
         openedMemories.size === 4
@@ -783,23 +755,21 @@
 
         finalShown = true;
 
-
         setTimeout(() => {
 
           document
             .getElementById("finalReport")
             .classList.add("show");
 
-        }, 650);
+        }, 600);
 
-
-        for (let i = 0; i < 11; i++) {
+        for (let i = 0; i < 12; i++) {
 
           setTimeout(() => {
 
             createFloat();
 
-          }, i * 130);
+          }, i * 120);
 
         }
 
@@ -807,56 +777,43 @@
 
     }
 
-
     function showSecret() {
-
 
       const secret =
         document.getElementById("secretNote");
 
-
       secret.classList.add("show");
-
 
       document.getElementById("cat")
         .textContent = "😼";
 
-
-      for (let i = 0; i < 7; i++) {
+      for (let i = 0; i < 8; i++) {
 
         setTimeout(() => {
 
           createFloat();
 
-        }, i * 140);
+        }, i * 130);
 
       }
 
     }
 
-
     function createFloat() {
-
 
       const item =
         document.createElement("div");
 
-
-      item.className =
-        "float-item";
-
+      item.className = "float-item";
 
       const symbols = [
-
         "🐾",
         "♡",
         "🐾",
-        "♡",
-        "☕",
+        "🤍",
+        "🍫",
         "🐾"
-
       ];
-
 
       item.textContent =
         symbols[
@@ -865,37 +822,27 @@
           )
         ];
 
-
       item.style.left =
         Math.random() * 100 + "vw";
-
 
       item.style.fontSize =
         (15 + Math.random() * 15) + "px";
 
-
       item.style.animationDuration =
         (5 + Math.random() * 4) + "s";
-
 
       item.style.color =
         "rgba(190,135,130,.30)";
 
-
       document.body.appendChild(item);
 
-
       setTimeout(() => {
-
         item.remove();
-
       }, 9000);
 
     }
 
-
   </script>
-
 
 </body>
 
